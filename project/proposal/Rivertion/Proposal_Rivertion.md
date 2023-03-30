@@ -139,27 +139,27 @@ Even though analyzing medical images for disease diagnosis gives a lot of advant
     <th>Timeframe</th>
   </tr>
   <tr>
-    <td>Data Collection</td>
+    <td>Data Gathering</td>
     <td>Week 1-2</td>
   </tr>
   <tr>
     <td>Data Cleaning and Preprocessing</td>
-    <td>Week 3-5</td>
+    <td>Week 3-4</td>
   </tr>
   <tr>
-    <td>Feature Extraction</td>
-    <td>Week 6-8</td>
+    <td>EDA</td>
+    <td>Week 5-7</td>
   </tr>
   <tr>
-    <td>Machine Learning Algorithms</td>
-    <td>Week 9-10</td>
+    <td>Build Model</td>
+    <td>Week 8-10</td>
   </tr>
   <tr>
-    <td>Data Visualizations</td>
+    <td>Evaluate Model</td>
     <td>Week 11-12</td>
   </tr>
   <tr>
-    <td>Report</td>
+    <td>Deploy Model</td>
     <td>Week 13-14</td>
   </tr>
 </table>
@@ -168,8 +168,45 @@ Even though analyzing medical images for disease diagnosis gives a lot of advant
 
 ## 9. 📚 Resources:
 
-- Provide a detailed breakdown of the resources required for the proposed data science project, including staff, equipment, software, and other expenses.
-
+<ol>
+  <li>
+    <p>Staff:</p>
+    <ul>
+      <li>Project Manager</li>
+      <li>Data Scientist</li>
+      <li>Machine Learning Engineer</li>
+      <li>Radiologist (to provide domain expertise)</li>
+      <li>Annotators for the medical images</li>
+    </ul>
+  </li>
+  <li>
+    <p>Equipment:</p>
+    <ul>
+      <li>High-performance computing equipment (e.g., GPU-enabled workstations or cloud computing resources) to train machine learning models on the medical image dataset</li>
+      <li>Computers for the staff to work on</li>
+    </ul>
+  </li>
+  <li>
+    <p>Software:</p>
+    <ul>
+      <li>3D Slicer, a medical imaging software for visualization and analysis of medical images</li>
+      <li>Machine learning algorithms, such as supervised learning (e.g., convolutional neural networks, decision trees) and unsupervised learning (e.g., clustering)</li>
+      <li>Deep learning frameworks, such as TensorFlow or PyTorch</li>
+      <li>Image processing libraries, such as OpenCV</li>
+      <li>Annotation software for labeling medical images</li>
+      <li>Collaboration and project management tools, such as Jira, Trello, and GitHub</li>
+    </ul>
+  </li>
+  <li>
+    <p>Other expenses:</p>
+    <ul>
+      <li>Data acquisition and storage</li>
+      <li>Annotation costs</li>
+      <li>Cloud computing costs (if using cloud-based resources)</li>
+      <li>Travel and accommodation costs for the project team to meet and work together, if necessary.</li>
+    </ul>
+  </li>
+</ol>
 
 
 ## 10. 🧰 Technical Specifications:
@@ -217,20 +254,40 @@ Even though analyzing medical images for disease diagnosis gives a lot of advant
 </ol>
 
 ## 11. 🏁 Timeline and Deliverables: 
-
-- Provide a detailed timeline for the project, including milestones and deadlines.
-
-- Specify the deliverables that will be provided at each milestone. It should also specify the expected time frame for each deliverable and the resources that will be required to complete the project.
-
-- Explain the quality assurance and testing procedures that will be followed.
+<ol>
+	<li>Detailed Timeline:</li>
+</ol>
+<ul>
+	<li>Week 1-2: Data Collection</li>
+	<li>Week 3-5: Data Cleaning and Preprocessing</li>
+	<li>Week 6-8: Feature Extraction</li>
+	<li>Week 9-10: Machine Learning Algorithms</li>
+	<li>Week 11-12: Data Visualizations</li>
+	<li>Week 13-14: Report</li>
+</ul>
+<ol start="2">
+	<li>Deliverables and Resources:</li>
+</ol>
+<ul>
+	<li>Data Collection: Deliverable: Complete dataset; Resources: Data acquisition and storage</li>
+	<li>Data Cleaning and Preprocessing: Deliverable: Cleaned and standardized dataset; Resources: Computers for staff, image processing libraries</li>
+	<li>Feature Extraction: Deliverable: Extracted features from dataset; Resources: High-performance computing equipment, deep learning frameworks</li>
+	<li>Machine Learning Algorithms: Deliverable: Trained machine learning models; Resources: High-performance computing equipment, supervised and unsupervised learning algorithms</li>
+	<li>Data Visualizations: Deliverable: Visualizations of dataset and model performance; Resources: Matplotlib, Seaborn, Tableau</li>
+	<li>Report: Deliverable: Final report on the project; Resources: Collaboration and project management tools</li>
+</ul>
+<ol start="3">
+	<li>Quality Assurance and Testing Procedures:</li>
+</ol>
+<ul>
+	<li>Cross-validation will be used to assess model performance and prevent overfitting.</li>
+	<li>The dataset will be split into training, validation, and test sets.</li>
+	<li>Hyperparameter tuning will be performed to optimize model performance.</li>
+	<li>A radiologist will provide domain expertise to ensure the accuracy of the image annotations.</li>
+	<li>The final report will include a discussion of limitations and potential areas for improvement.</li>
+</ul>
 
 
 ## 12. 📄 Conclusion:
 
-- Conclude your proposal with a call to action, highlighting the benefits of your proposed solution and urging the decision-makers to take action.
-
-- Summarize the proposal and reiterate the importance of the project.
-
-- Mention any potential limitations or challenges that may arise during the project.
-
-- Provide a call to action for the client to approve the proposal and proceed with the project.
+In conclusion, our proposed solution for automating the diagnosis of pneumonia through machine learning algorithms has the potential to revolutionize the medical field. By leveraging state-of-the-art technology and techniques, we aim to provide a robust and accurate diagnostic tool for medical professionals to assist in making informed decisions about patient care. Our project timeline, deliverables, and technical specifications have been carefully planned to make sure the project is executed efficiently and effectively. We are confident in our ability to deliver high-quality results within the proposed timeframe and budget. However, we recognize that challenges and limitations may arise during the project, such as data quality issues or hardware constraints. We believe that our proposed solution has the potential to make a significant impact in the medical field, and we are excited about the prospect of working on this project.

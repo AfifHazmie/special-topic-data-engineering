@@ -18,7 +18,7 @@
 
 
 ## Executive Summary
-- Start the proposal with a brief summary that highlights the main points of the project, including its goals, objectives, and expected outcomes.
+-Consumer segmentation that prioritizes product attributes involves categorising customers into groups according to their needs or preferences for particular product features. To find customer groups with comparable traits and preferences, it entails examining data on customer behaviour, purchase history, demographics, and product preferences. (chosen bussiness)  can adjust their marketing initiatives and product offers to fit the unique needs of each consumer segment by understanding their needs and preferences, which will boost customer satisfaction and loyalty.
 
 ## Background
 - Provide a background to the problem that the proposed data science project aims to solve. This should include a clear explanation of the current situation, the problems faced, and the potential benefits of the proposed solution.
@@ -46,18 +46,20 @@
 - Provide a clear plan for mitigating these risks and limitations. This should include a risk management plan and contingency strategies.
 
 ## Deliverables and Milestones
-<!--Provide a list of the key deliverables and milestones of the proposed data science project, including timelines and deadlines. --->
-Deliverables:
-1. Detailed proposal outlining the product features of the data science project using MongoDB
-2. Technical specification document outlining the architecture and design of the project
-3. Collecting customer data 
-4. Data pre-processing
-5. Identify the relevant features of customers' product
-6. Segment the customers based on the product
-7. Visualize the insights
 
-Milestones :
-1. Week 1-2: Research on the product feature data science project requirements and finalize the proposal
+<div align="center">
+  
+| Deliverables and Milestones | Timeframe  |
+|----------|:-------------:|
+| Planning and Requirements Gatherings | Week 1-2 |
+| Data Exploration and Cleaning | Week 3-4 |
+| Feature Engineering | Week 5-6 |
+| Model Selection and Training | Week 7-8 |
+| Model Deployment | Week 9-11 |
+| Model Monitoring and Maintenance | Week 12-13 |
+| Presentation | Week 14 | 
+
+</div>
 
 ## Resources
 - Provide a detailed breakdown of the resources required for the proposed data science project, including staff, equipment, software, and other expenses.
@@ -69,9 +71,13 @@ Milestones :
 - Explain the data security measures that will be implemented.
 
 ## Timeline and Deliverables
-- Provide a detailed timeline for the project, including milestones and deadlines.
-- Specify the deliverables that will be provided at each milestone. It should also specify the expected time frame for each deliverable and the resources that will be required to complete the project.
-- Explain the quality assurance and testing procedures that will be followed.
+Here is a detailed timeline and deliverables for the data science project using MongoDB:
+
+
+Quality assurance and testing procedures:
+- Throughout the project, our team will follow standard best practices for data science and software engineering, including code review, and documentation.
+- The team will also conduct regular testing and validation of the data pipeline, machine learning model, and user interface to ensure accuracy and reliability.
+- Quality assurance will be done by comparing the results of the model with the actual data.
 
 ## Conclusion
 - Conclude your proposal with a call to action, highlighting the benefits of your proposed solution and urging the decision-makers to take action.
