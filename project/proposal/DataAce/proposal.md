@@ -72,12 +72,35 @@ This project will be using various research methods to achieve our main objectiv
 ## :hammer_and_wrench: System Architecture:
 - Provide a detailed overview of the proposed system architecture including the tools and technologies that will be used to develop and deploy the system
 - Explain how the data will be stored, managed, and analyzed using MongoDB, as well as the hardware and software requirements needed to support the system.
+
+3. Software and Hardware Requirements: 
+ 
+   The software and hardware required for building a fraud detection dashboard using MongoDB depends on the size and complexity of the data to be processed:
+
+      Software:
+      * MongoDB Server
+      * MongoDB Compass or MongoDB Shell for interacting with the database
+      * MongoDB Charts, Tableau, or Power BI for data visualization and building dashboard
+      * Python, Pandas, Scikit-learn, TensorFlow, and PyTorch for data analysis and machine learning
+      
+      Hardware: 
+      * At least 8 GB of RAM is recommended, a multi-core processor with a clock speed of at least 2.5 GHz and a high-speed network connection is recommended for fast         data transfer between the MongoDB database and other components of the system.
 - Discuss the tools and frameworks that will be used for data visualization and analysis.
 - Provide a flowchart or block diagram of the system architecture.
 
 ## :pushpin: Risks and Limitations:
-- Identify potential risks and limitations associated with the proposed data science project, including technical, financial, and legal risks. 
-- Provide a clear plan for mitigating these risks and limitations. This should include a risk management plan and contingency strategies.
+
+There are several risks and limitations that need to be considered when building fraud detection dashboard:
+
+ 1. Technical Risks:
+	   - Data Quality: May not have access to all the data needed to build an effective fraud detection dashboard. 	For example, some data may be restricted due to        privacy concerns. Incomplete, inconsistent or inaccurate data can lead to false positives or missed fraud cases.
+ 2. Financial Risks:
+	   -  Maintenance Costs: After the initial development dashboard, Ongoing maintenance and updates are required to ensure that the system remains effective. This can result in additional costs, such as software upgrades, data storage, and data processing.
+	   - Investment Costs: May require significant upfront investment in infrastructure, software, and personnel. There is a risk that the organization may not see a return on investment if the dashboard does not effectively detect and prevent fraud.
+ 3. Legal Risks: 
+	   - Liability: Organizations may be held liable for fraudulent activities that occur within their systems, even if they are not directly responsible. This could  result in significant legal and financial costs.
+
+ It is important to identify and mitigate these risks when building a fraud detection dashboard to ensure that the dashboard is effective, financially viable, and legally compliant. We can implement appropriate data security and privacy measures, engaging legal experts to review the dashboard's compliance with relevant regulations, and carefully evaluating the financial costs and benefits of the project.
 
 ## ⏳ Deliverables and Milestones:
 <table border="1" align="center">
@@ -179,7 +202,9 @@ Week 13-14: Deployment and Documentation
   **Quality Assurance and Testing Procedures:**
 
 ## :round_pushpin: Conclusion:
-- Conclude your proposal with a call to action, highlighting the benefits of your proposed solution and urging the decision-makers to take action.
-- Summarize the proposal and reiterate the importance of the project.
-- Mention any potential limitations or challenges that may arise during the project.
-- Provide a call to action for the client to approve the proposal and proceed with the project
+
+This project proposal outlines a comprehensive plan for developing the fraud detection dashboard, including data collection, preprocessing, analysis, visualization, and reporting. The proposed system architecture leverages MongoDB, Python, and a web-based dashboard to deliver an effective and efficient solution.
+
+In conclusion, our proposed fraud detection dashboard using MongoDB presents a viable solution for businesses to combat fraudulent activities that could lead to significant financial losses. The dashboard will provide **real-time insights into fraudulent patterns, trends, and anomalies,** enabling businesses to take proactive measures and mitigate risks. While there may be challenges and limitations in implementing the project, including data privacy concerns and technical challenges stated above, these can be addressed through appropriate measures and strategies.
+
+Lastly, we propose to develop a fraud detection dashboard using MongoDB that leverages data science techniques to provide actionable insights into fraudulent activities. We believe that this project is brings critical importance to businesses and organizations.

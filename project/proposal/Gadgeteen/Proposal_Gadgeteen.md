@@ -80,13 +80,21 @@ The project will follow the Agile methodology, with sprints of 10-12 weeks, and 
 1. Data Collection: The project will collect Twitter data using the Twitter API, which provides access to a sample of the real-time Twitter stream. The collected data will include tweets that mention "ChatGpt" and related hashtags, keywords, and phrases.
 
 2. Data Pre-processing: The collected data will be pre-processed to remove noise, such as irrelevant tweets and spam, and to extract relevant information, such as the user's sentiment towards ChatGpt. The pre-processing steps will include:
+
   •	Removing duplicate tweets
+  
   •	Removing retweets
+  
   •	Removing tweets that are not in English
+  
   •	Tokenizing the text and removing stop words
+  
   •	Applying stemming or lemmatization to reduce the text to its base form
+  
   •	Applying part-of-speech tagging to identify noun phrases and named entities
+  
   •	Filtering the text to remove mentions, URLs, and other irrelevant information
+  
   •	Applying sentiment analysis to determine the polarity of the tweets
 
 3. Sentiment Analysis: The project will perform sentiment analysis on the pre-processed data to determine the polarity of the tweets, i.e., positive, negative, or neutral sentiment. The sentiment analysis will be performed using a machine learning model, such as a Naive Bayes or Support Vector Machine (SVM) classifier, trained on a labelled dataset of tweets.
@@ -101,36 +109,93 @@ All in all, the methodology of the project is to collect and pre-process Twitter
 
 ## 🖥️ System Architecture
 
-&ensp;Our proposed system architecture will be a web application that can monitor and analyze social media data in real-time to understand public opinion and sentiment on ChatGPT in Malaysia. The application will collect data from social media using APIs, perform sentiment analysis and topic modeling, and present the results through visualizations and dashboards.
+&ensp;&ensp;Our proposed system architecture will be a web application that can monitor and analyze social media data in real-time to understand public opinion and sentiment on ChatGPT in Malaysia. The application will collect data from social media using APIs, perform sentiment analysis and topic modeling, and present the results through visualizations and dashboards.
 
 **Tools and Technologies:**
-Python: As the main programming language.
-Tweepy: To connect to Twitter's API.
-Pandas: For data manipulation and preprocessing.
-MongoDB: To store the collected data.
-NLTK: For sentiment analysis.
-Power BI: For data visualization and analysis.
+
+- **Python**: As the main programming language.
+
+- **Tweepy**: To connect to Twitter's API.
+
+- **Pandas**: For data manipulation and preprocessing.
+
+- **MongoDB**: To store the collected data.
+
+- **NLTK**: For sentiment analysis.
+
+- **Power BI**: For data visualization and analysis.
+
 
 **Data Storage and Management:**
-We will use MongoDB as our database management system. MongoDB is a document-oriented NoSQL database that can handle large volumes of unstructured data. We will store the collected data in MongoDB in a format that is suitable for further analysis. We will use PyMongo, a Python library for MongoDB, to interact with the database. The data will be organized in a collection called "tweets" with the following fields: tweet_id, created_at, text, username, user_id, location, sentiment, and topic.
+
+&ensp;&ensp;We will use MongoDB as our database management system. MongoDB is a document-oriented NoSQL database that can handle large volumes of unstructured data. We will store the collected data in MongoDB in a format that is suitable for further analysis. We will use PyMongo, a Python library for MongoDB, to interact with the database. The data will be organized in a collection called "tweets" with the following fields: tweet_id, created_at, text, username, user_id, location, sentiment, and topic.
 
 **Hardware and Software Requirements:**
-The proposed system architecture requires a server with the following hardware specifications:
 
-Processor: Intel Core i7 or equivalent
-RAM: 8 GB or more
-Storage: 500 GB or more
-The software requirements for the server are:
-
-Operating System: Ubuntu Server 20.04 LTS
-Python 3.8 or higher
-MongoDB 4.4 or higher
+<table border="1" align="center">
+  <tr>
+    <th>Hardware</th>
+    <th>Requirements</th>	
+  </tr>
+  <tr>
+    <td>Processor</td>
+    <td>2 GHz or more</td>
+  </tr>
+   <tr>
+      <td>RAM</td>
+      <td>8 GB or more</td>
+    </tr>
+    <tr>
+      <td>Storage</td>
+      <td>At least 10 GB of free disk space</td>
+    </tr>
+  <tr>
+    <th>Software</th>
+    <th>Requirements</th>	
+  </tr>
+  <tr>
+    <td>Operating System</td>
+    <td>Windows, Linux, or macOS</td>
+  </tr>
+   <tr>
+      <td>Python</td>
+      <td>Version 3.8 or higher</td>
+    </tr>
+    <tr>
+      <td>MongoDB</td>
+      <td>Version 4.4 or higher</td>
+    </tr>
+  </table>
 
 **Data Visualization and Analysis:**
-We will use Power BI, a business intelligence tool, for data visualization and analysis. Power BI allows us to create interactive dashboards and reports based on the data stored in MongoDB. We will use the Power BI Desktop app to connect to the MongoDB database and import the data. We will then create visualizations such as charts, graphs, and tables to display the sentiment and topics related to ChatGPT. We can also use filters and slicers to explore the data further.
+
+&ensp;&ensp;We will use Power BI, a business intelligence tool, for data visualization and analysis. Power BI allows us to create interactive dashboards and reports based on the data stored in MongoDB. We will use the Power BI Desktop app to connect to the MongoDB database and import the data. We will then create visualizations such as charts, graphs, and tables to display the sentiment and topics related to ChatGPT. We can also use filters and slicers to explore the data further.
 
 **Flowchart of System Architecture:**
-flowchart
+
+<div class="mermaid">
+  
+ ```mermaid
+---
+title: System Architecture Flowchart 
+---
+  
+flowchart TB
+    A(Start) --> B[Collect data from social media using Tweepy API]
+    B --> C[Preprocess and clean data using Pandas]
+    C --> D[(Store data in MongoDB database)]
+    D --> E[Perform sentiment analysis on data using NLTK]
+    E --> F[Perform topic modeling on data]
+    F --> G[(Store sentiment and topic information in MongoDB)]
+    G --> H[Connect Power BI to MongoDB database]
+    H --> I[Import data into Power BI Desktop]
+    I --> J[Create visualizations using Power BI]	
+    J --> K[Explore data and gain insights.]
+    K --> L(Stop)
+	
+  
+  ```
+  </div>
 
 
 ## 💣 Risks and Limitations
@@ -218,7 +283,7 @@ b) Anonymize the data by removing personal information, and ensure that all data
    - Computer/Laptop
    
 - **Software**
-   - Python and libraries like Tweepy, Pandas, NLTK, Matplotlib
+   - Python and libraries like Tweepy, Pandas, PyMongo, NLTK, Matplotlib
    - MongoDB
    - Visual Studio Code
    - Tableau / Power BI
@@ -237,18 +302,24 @@ b) Anonymize the data by removing personal information, and ensure that all data
   </tr>
   <tr>
     <th align= "left">Data schema</th>
-    <td>JSON like data including fields such as the tweet ID, tweet text, user ID, time and other relevant metadata</td>
+    <td>JSON like data including fields such as the tweet ID, tweet text, user ID, time, location and other relevant metadata</td>
   </tr>
   <tr>
     <th align= "left">Data transformations</th>
-    <td>Data preprocessing techniques such as converting all text to lowercase, tokenization, removing stop words, stemming, and lemmatization will be used on the collected tweets text.</td>
+    <td>
+      <ul>
+        <li>Data preprocessing techniques such as converting all text to lowercase, tokenization, removing stop words, stemming, and lemmatization will be used on the collected tweets text.</li>
+        <li>Feature extraction, dimensionality reduction, and normalization will be performed on the data before model training.</li>
+      </ul>
+    </td>
   </tr>
   <tr>
     <th align= "left">Machine learning algorithms</th>
     <td>
       <ul>
-	<li>Naive Bayes, Support Vector Machines (SVM), Neural Network</li>
-	<li>VADER</li>
+	<li>Supervised: Naive Bayes, Support Vector Machines (SVM), Neural Network</li>
+	<li>Lexicon-based approach: VADER</li>
+	<li>Topic modeling: Latent Dirichlet Allocation (LDA)</li>
       </ul>
     </td>
   </tr>
@@ -266,7 +337,7 @@ b) Anonymize the data by removing personal information, and ensure that all data
   </tr>
   <tr>
     <th align= "left">Libraries</th>
-    <td>Tweepy, Numpy, Pandas, NLTK, Matplotlib, Seaborn, WordCloud</td>
+    <td>Tweepy, Numpy, Pandas, PyMongo, NLTK, Gensim, Matplotlib, Seaborn, WordCloud</td>
   </tr>
   <tr>
     <th align= "left">Hardware & software requirements</th>
@@ -274,8 +345,8 @@ b) Anonymize the data by removing personal information, and ensure that all data
       <ul>
         <li>Processor: 2 GHz or more</li>
         <li>Memory: 8 GB or more</li>
-        <li>Hard disk: 500 GB or more</li>
-        <li>Ethernet connection (LAN) OR a wireless adapter (Wi-Fi)</li>
+        <li>Storage: 10 GB or more free disk space</li>
+        <li>Ethernet connection (LAN) or wireless adapter (Wi-Fi)</li>
         <li>Windows, MacOS or Linux operating system with all the mentioned softwares, programming languages, frameworks and libraries installed including Python 3.8 or higher, and MongoDB</li>
       </ul>
     </td>

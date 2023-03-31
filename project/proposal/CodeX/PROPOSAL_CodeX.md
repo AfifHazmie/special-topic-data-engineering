@@ -1,22 +1,26 @@
 <h1 align='center'>Recommendation Engine: Netflix Shows/Movie Reccomendation 🔍</h1>
 
+<p align="center">
+<img height='200px' src='logo.jpg'/>
+</p> 
 
 ## Table of Contents
 <!---
 <li><a href="#section1">Section 1</a></li>
 --->
-- [Executive Summary](#executive-summary)
-- [Background](#background)
-- [Goals and Objectives](#goals-and-objectives)
-- [Scope](#scope)
-- [Methodology](#methodology)
-- [System Architecture](#system-architecture)
-- [Risks and Limitations](#risks-and-limitations)
-- [Deliverables and Milestones](#deliverables-and-milestones)
-- [Resources](#resources)
-- [Technical Specifications](#technical-specifications)
-- [Timeline and Deliverables](#timeline-and-deliverables)
-- [Conclusion](#conclusion)
+- [Table of Contents](#table-of-contents)
+- [1. Executive Summary](#1-executive-summary)
+- [2. Background](#2-background)
+- [3. Goals and Objective](#3-goals-and-objective)
+- [4. Scope](#4-scope)
+- [5. Methodology](#5-methodology)
+- [6. System Architecture](#6-system-architecture)
+- [7. Risks and Limitation](#7-risks-and-limitation)
+- [8. Deliverables and Milestones](#8-deliverables-and-milestones)
+- [9. Resources](#9-resources)
+- [10. Technical Specifications](#10-technical-specifications)
+- [11. Timeline and Deliverables](#11-timeline-and-deliverables)
+- [12. Conclusion](#12-conclusion)
 
 ## 1. Executive Summary
 Netflix, YouTube, Spotify and many more streaming platforms have been introduced to the world as the technologies are advancing rapidly nowadays. With this being said, users are prone to use it almost everyday whenever they wanted to watch movies or tv shows and stream any music. In this project, our group will focused on the recommendation engine implemented in Netflix. The objective of this project is to create a system that display the best suggestion of tv shows on streaming platform. The system we proposed will implement the usage of MongoDB as a database that can keep track on the user behavioral data which will then be processed using machine learning to recognize streaming patterns of each user so that the most relevant suggestion can be presented to the users to increase the users satisfactory.
@@ -39,21 +43,26 @@ As a result of its success, the Netflix recommendation system has become a bench
 7) Improve operational efficiency: A data-driven project may aim to improve operational efficiency by automating tasks, reducing manual intervention, and streamlining processes. For example, in a manufacturing industry, the goal may be to optimize production processes and reduce waste by using predictive maintenance techniques.
 
 ## 4. Scope
-- This section should define the scope of the project, including the data sources to be used, the tools and technologies to be employed, and any other relevant information that will be needed to successfully complete the project.
-- The scope of this project is to develop AI 
-- 
+- The scope of this project is to create Netflix recommedation engine based on few factors. These factors will create personalized recommendation.
+- This project requires dataset scraped from Netflix websites using Phyton.
+- The main tool will be used in this project is MongoDB to store Netflix viewing history , Netflix search queries , user ratings and reviews and Netflix content    metadata.
+- Matplotlib, Seaborn and Tableau will be used to create visualizations of the recommendation system's performance.
+
 
 ## 5. Methodology
 | Components | Description |
 |--|--|
 | Data Collection | collect data from sources such as Netflix Recommendation Algorithm (NRA). This data will be used to train the reccomendation model  |
 | Data Cleaning| clean the collected data to removed irrelevant data or incomplete data such as null in user watching video period. |
-| Data Transforming| Transform the cleaned data into format(____) used by MongoDB |
+| Data Transforming| Transform the cleaned data used by MongoDB |
 | Data Loading| Load transformed data into MongoDB collections |
 | Model Training | Trains the recommendatiob model using machne learning algorithm based on data collected in steps 1 |
 | Reccomendation Generator | Generate recommendations for users based on their previous interaction with the system. |
 
-Software/Hardware: 
+Below is an overview example of how the system will be programmed:
+<p align="center">
+<img height='400px' src='netflixpix.jpg'/>
+</p> 
 
 ## 6. System Architecture
 | Components | Tools and Technologies|
@@ -64,10 +73,6 @@ Software/Hardware:
 |Model Training | The recommendation algorithm will be trained using historical data to learn the patterns and realationsjip between users and Amazon.|
 |Model Deployment| The deployed model will be able to generate real-time recommendations for users.|
 |Data Visualization and Analytics| By using Matplotlib, Seaborn and Tableau, to visualize and analyze the recommendation data.| 
-
-- MongoDB will store the data in MongoDB collections, if there is a large volumes of data, MongoDB also can handle using sharding.
-- MongoDB provides tools and features for managing data, including data modeling, backup and recovery, security, and monitoring.
-- We can also do aggregation, map-reduce, and text search to analyst the data and extract insights from the recommendation data.
 
 1) Matplotlib: Matplotlib is a Python library for creating static, animated, and interactive visualizations in Python. It provides a wide range of charts and graphs, including line charts, bar charts, scatter plots, and heat maps.
 
@@ -80,6 +85,8 @@ Software/Hardware:
 5) Tableau: Tableau is a data visualization and business intelligence tool that allows users to create interactive dashboards and reports. It provides a drag-and-drop interface for creating visualizations and supports a wide range of data sources.
 
 6) Power BI: Power BI is a business analytics service by Microsoft that allows users to create interactive dashboards and reports. It provides a range of visualization types, including charts, maps, and tables.
+
+7) MongoDB: MongoDB will store the data in MongoDB collections, if there is a large volumes of data, MongoDB also can handle using sharding. It provides tools and features for managing data, including data modeling, backup and recovery, security, and monitoring. We can also do aggregation, map-reduce, and text search to analyst the data and extract insights from the recommendation data.
 
 Below are the flowchart for the system architecture:
 <p align="center">
@@ -223,10 +230,9 @@ Machine Learning Algorithms:
 - Content-based filtering: Recommends items to users based on the similarity of their attributes to items they have liked before.
 - Hybrid approaches: Combines collaborative and content-based filtering techniques to improve recommendations.
 - Matrix factorization: Factorizes the user-item interaction matrix into low-rank matrices to capture latent features.
-- Deep learning: Neural networks can be used to model complex user-item interactions and make recommendations.
 
 Data Visualization Tools:
-- Tableau, PowerBI, and other business intelligence tools can be used to create visualizations of the recommendation system's performance.
+- Tableau, PowerBI, Altryx and other business intelligence tools can be used to create visualizations of the recommendation system's performance.
 - Python visualization libraries like Matplotlib, Seaborn, and Plotly can be used to create interactive visualizations of the data and model results.
 
 Hardware Requirements:
@@ -235,7 +241,7 @@ Hardware Requirements:
 - Storage: The system will require a large amount of storage to store the Netflix viewing history, search queries, user ratings and reviews, content metadata, and machine learning models. A high-performance storage system, such as a solid-state drive (SSD), is recommended for better performance.
 
 Software Requirements:
-- Operating System: The recommended operating system for the system is Linux or MacOS, as they are both reliable and support many of the required software tools.
+- Operating System: The recommended operating system for the system is Windows, Linux or MacOS, as they are both reliable and support many of the required software tools.
 - Programming Language: The system will use Python as the primary programming language for building machine learning models and data processing pipelines.
 - Frameworks and Libraries: The system will use a variety of machine learning frameworks and libraries such as Apache Spark, TensorFlow, PyTorch, Scikit-learn, Keras, Pandas, and NumPy. These libraries can be installed using the pip package manager in Python.
 - Database: The system will use a distributed NoSQL database such as Apache Cassandra to store and manage large-scale data sets.
@@ -244,13 +250,11 @@ Software Requirements:
 **Data Security**
 - Encryption: Encryption is the process of encoding information in such a way that only authorized parties can access it. All sensitive data, including user data, machine learning models, and system logs, should be encrypted during storage and transmission. Encryption can be implemented using industry-standard protocols such as AES, SSL, and TLS.
 
-- Access control: Access control is the process of granting or denying access to resources based on the user's identity, role, and permissions. Access to sensitive data should be restricted to only authorized personnel who require access to perform their duties. Access control policies can be implemented using techniques such as role-based access control (RBAC) and attribute-based access control (ABAC).
+- Access control: Access control is the process of **granting or denying access to resources based on the user's identity, role, and permissions**. Access to sensitive data should be restricted to only authorized personnel who require access to perform their duties. Access control policies can be implemented using techniques such as role-based access control (RBAC) and attribute-based access control (ABAC).
 
-- Authentication and Authorization: Authentication is the process of verifying the identity of a user, while authorization is the process of granting or denying access to resources based on the user's identity and permissions. All users, including system administrators, should be required to authenticate before accessing the system. Authentication can be implemented using techniques such as password authentication, two-factor authentication (2FA), or biometric authentication. Authorization can be implemented using access control policies.
+- Authentication and Authorization: Authentication is the process of verifying the identity of a user, while authorization is the process of granting or denying access to resources based on the user's identity and permissions. All users, including system administrators, should be required to authenticate before accessing the system. Authentication can be implemented using techniques such as **password authentication, two-factor authentication (2FA), or biometric authentication.** Authorization can be implemented using access control policies.
 
 - Data Backup and Recovery: Regular backups of sensitive data should be taken to ensure that data can be recovered in case of any data loss, corruption or disaster. Backup and recovery policies should be put in place, and backup data should be stored in a secure and encrypted location.
-
-- Audit trails: An audit trail is a record of system activity that can be used to trace security breaches, detect unauthorized access, and ensure compliance with data security regulations. An audit trail should be implemented to track all system activity, including user logins, data access, and data modification.
 
 - Regular security audits: Regular security audits should be performed to identify vulnerabilities, address security concerns, and ensure that security policies and procedures are being followed. Security audits can be performed internally or by third-party security firms.
 
@@ -289,15 +293,18 @@ Deliverables and Resources
   > - `Resources` : HTML, CSS, Javascript
 - Deployment and Testing
   > - `Deliverables` : A deployed recommendation system and testing results
-  > - `Resources` : User feedback mechanism
 - Maintenance
   > - `Deliverables` : Performance monitoring and user feedback analysis
-  > - `Resources` : User feedback mechanism
 
+Quality Assurance and Testing Procedures
+
+1. Quality Assurance
+  - Validate the data used by the recommendation system. The data should be accurate, up-to-date, and relevant to the user.
+  - Collect feedback from users. The system can ask the users to rate the recommendations they receive and use the feedback to enhance the system.
+2. Testing Procedures
+  - Functional testing verifying that the system is working as intended that includes the system's ability to produce recommendations based on user history, preference and ratings.
+  - Performance testing verifying that the system able to handle a high volume of requests and provide recommendations in a timely manner.
+  - User Acceptance testing is to test the system with the actual users to verify that the system is providing relevant recommendations that meet their needs.
 
 ## 12. Conclusion
-- Conclude your proposal with a call to action, highlighting the benefits of your proposed solution and urging the decision-makers to take action.
-- Summarize the proposal and reiterate the importance of the project.
-- Mention any potential limitations or challenges that may arise during the project.
-- Provide a call to action for the client to approve the proposal and proceed with the project.
-
+In conclusion, the proposed system will provide shows/movies reccomendation based on user's favourite genre, director, actors, and many more. Users will be able to create content-based filtering to provide personalised reccomendation. However, the recommendation system is not perfect, and there have been cases where users have reported getting irrelevant or inappropriate recommendations. This can be due to various factors, such as limited data or biases in the algorithm. While there is still room for improvement, the system will be a game-changer in the entertainment industry and will help to shape the way we consume media today.

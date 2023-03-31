@@ -1,7 +1,20 @@
 <h1 align='center'><b>Analyzing Medical Images for Disease Diagnosis in Malaysia 👨‍⚕️</b></h1> 
 
+## Table of Contents
+* [📜 Executive Summary](#-executive-summary)
+* [📝 Background](#-background)
+* [🎯 Goals and Objectives](#-goals-and-objectives)
+* [🔍 Scope](#-scope)
+* [📄 Methodology](#-methodology)
+* [⚙️ System Architecture](#-system-architecture)
+* [🛑 Risks and Limitations](#-risks-and-limitations)
+* [⏳ Deliverables and Milestones](#-deliverables-and-milestones)
+* [📚 Resources](#-resources)
+* [🧰 Technical Specifications](#-technical-specifications)
+* [🏁 Timeline and Deliverables](#-timeline-and-deliverables)
+* [📄 Conclusion](#-conclusion)
 
-## 1. 📜 Executive Summary
+## 📜 Executive Summary
 
 This project aims to develop a computer-aided diagnostic (CAD) system for analyzing medical images to improve disease diagnosis in Malaysia. The objectives of the project are to train machine learning models on a dataset of medical images, evaluate the performance of the models using various metrics, and integrate the models into a CAD system that can assist medical professionals in making more accurate diagnoses.
 
@@ -9,9 +22,9 @@ The expected outcomes of the project include a dataset of annotated medical imag
 
 
 
-## 2. 📝 Background:
+## 📝 Background:
 <p align="center">
-<img src="https://i.kym-cdn.com/entries/icons/original/000/032/279/Screen_Shot_2019-12-30_at_11.26.24_AM.png" alt="Paris" height="250"></img>
+<img src="https://www.postdicom.com/images/blog-posts/social-media-images/medical-imaging-science-and-applications-social.jpg" alt="Health" height="250"></img>
 </p>
 
 Medical imaging plays a crucial role in modern healthcare for the diagnosis and treatment of various diseases. In Malaysia, the demand for medical imaging services has been growing due to an aging population and increasing incidence of chronic diseases. However, the shortage of qualified radiologists, coupled with the increasing complexity of medical images, has led to delays in diagnosis, misdiagnosis, and suboptimal treatment outcomes.
@@ -23,7 +36,7 @@ The proposed data science project aims to address these challenges by developing
 The potential benefits of the proposed CAD system are significant. By improving the speed and accuracy of diagnosis, the system can reduce the time required for patients to receive treatment, which can be critical in cases where time is of the essence. Additionally, the system can help reduce the workload of radiologists and improve their efficiency, allowing them to spend more time on complex cases that require their expertise. Finally, the system can also help address the shortage of qualified radiologists by enabling healthcare providers to diagnose and treat more patients with existing resources. Overall, the proposed CAD system has the potential to significantly improve healthcare outcomes in Malaysia and enhance the quality of medical imaging services.
 
 
-## 3. 🎯 Goals and Objectives:
+## 🎯 Goals and Objectives:
 
 Goals:
 The main goal of the proposed project is to develop a computer-aided diagnostic (CAD) system for medical imaging analysis that can improve disease diagnosis in Malaysia. The CAD system will leverage machine learning models trained on a dataset of medical images to assist radiologists in making more accurate diagnoses, reducing the time and effort required to analyze images, and improving the efficiency of diagnosis. The ultimate goal is to improve patient outcomes and enhance the quality of medical imaging services in Malaysia.
@@ -39,7 +52,7 @@ Objectives:
 8. Refine the CAD system based on feedback from medical professionals and patients to improve its performance and usability.
 
 
-## 4. 🔍 Scope: 
+## 🔍 Scope: 
 
 <ul>
   <li>The scope of this project is to develop an AI system for the analysis of chest X-ray images of pediatric patients.</li>
@@ -50,14 +63,14 @@ Objectives:
 </ul>
 
 
-## 5. 📄 Methodology:
+## 📄 Methodology:
 
 The proposed data science project for developing a computer-aided diagnostic (CAD) system for analyzing medical images will be executed using the following methodology:
 
 <ol>
 	<li>Data Collection</li>
   	<ul>
- 		<li>Medical images such as X-rays will be collected from various hospitals and medical centers in Malaysia. The images will be anonymized and stored in 		a secure database.</li>
+ 		<li>Medical images such as X-rays will be collected from various websites. The images will be anonymized and stored in 		a secure database.</li>
   	</ul>
 	<li>Data Cleaning and Preprocessing</li>
   	<ul>
@@ -86,30 +99,93 @@ The software and hardware resources required for the project include:
 5. High-performance computing resources such as GPUs and multi-core processors for training the machine learning models.
 
 
-## 6. ⚙️ System Architecture:
 
-The proposed system architecture for the computer-aided diagnostic (CAD) system for analyzing medical images consists of three main components: data storage and management, machine learning model training and evaluation, and the CAD system interface. The system architecture will be implemented using various tools and technologies, including MongoDB, Python, TensorFlow, Flask, and React.
+## ⚙️ System Architecture:
 
-
-| Components | Description |
-| ------------- | ------------- |
-| Data Storage and Management  | The medical image dataset will be stored in MongoDB, a document-based NoSQL database that provides scalability and flexibility. MongoDB allows for efficient storage, retrieval, and querying of large datasets. The dataset will be annotated with labels that indicate the presence or absence of specific medical conditions.  |
-| Machine Learning Model Training and Evaluation  | Python will be used for machine learning model training and evaluation. The TensorFlow library will be used to develop and train machine learning models on the annotated medical image dataset. The performance of the trained models will be evaluated using various metrics such as accuracy, precision, recall, and F1 score. The best-performing models will be selected and integrated into the CAD system.  |
-| CAD System Interface | The CAD system interface will be developed using Flask, a Python-based web framework, and React, a JavaScript library for building user interfaces. The CAD system interface will provide medical professionals with a user-friendly interface to upload medical images, analyze the images using the 		  trained machine learning models, and receive diagnostic results. The CAD system interface will also include data visualization and analysis tools to enable medical professionals to explore and interpret the results of the machine learning models. |
+The CAD system architecture will consist of various components, including data collection, pre-processing, data analysis, feature extraction, machine learning, CAD system integration, and others. MongoDB will be used to store and manage the pre-processed medical image data, and TensorFlow will be used to build and train the machine learning models. The CAD system will be developed using Flask, a Python-based web framework, and will include interactive and static data visualization tools such as Plotly and Matplotlib.
 
 
-The suggested system architecture calls for a server with at least 16 GB of RAM and a multi-core CPU in terms of hardware and software requirements. For the purpose of accelerating the training of machine learning models, the server should also include a GPU with at least 8 GB of VRAM. Python, TensorFlow, Flask, MongoDB, and a Linux operating system should all be installed on the server.
+| No. | Components | Description |
+| ------------- | ------------- | ------------- |
+| 1. | Data Collection | Collect medical images from various sources such as hospitals and medical research institutions. |
+| 2. | Pre-processing | Remove noise, artifacts, and irrelevant information from the images. Resize, normalize, and standardize the images to ensure consistency across the dataset. Label the images to indicate the presence or absence of specific medical conditions. |
+| 3. | Data Analysis | Conduct exploratory data analysis (EDA) techniques such as data visualization to gain insights into the data and identify potential outliers or anomalies. |
+| 4. | Feature Extraction | Extract meaningful features from the pre-processed images using techniques such as convolutional neural networks (CNNs). |
+| 5. | Machine Learning | Train a machine learning model such as a support vector machine (SVM) or random forest using the extracted features to predict the presence or absence of specific medical conditions. |
+| 6. | Model Evaluation | Evaluate the performance of the machine learning model using various metrics such as accuracy, precision, and recall. |
+| 7. | Model Optimization | Optimize the machine learning model using hyperparameter tuning and cross-validation techniques. |
+| 8. | CAD System Integration | Integrate the trained and optimized machine learning model into a CAD system that can assist medical professionals in making more accurate diagnoses. |
+| 9. | User Interface | Develop a user-friendly interface for the CAD system that includes various data visualization techniques such as interactive and static plots, data tables, and heatmaps. |
+| 10. | Deployment | Deploy the CAD system on a server with appropriate hardware and software resources such as a GPU with at least 8 GB of VRAM, a Linux operating system with Python, TensorFlow, Flask, and MongoDB installed, and data visualization and analysis tools such as Plotly and Matplotlib. |
+| 11. | Maintenance | Regularly monitor and upgrade the hardware and software resources as necessary to ensure optimal performance of the CAD system. |
 
-For data visualisation and analysis, the CAD system interface will make use of a variety of programmes and frameworks, such as Plotly and Matplotlib for dynamic and static plots, respectively. Medical professionals will be able to investigate and examine the diagnostic outcomes of the trained machine learning models using the interface's data tables, which will also be included.
+___
 
-Below are the flowchart for the system architecture:
+<ol>
+	<li>Data Storage and Management:</li>
+<br>
+<p>MongoDB is a NoSQL document-oriented database that is highly suitable for handling large and complex datasets such as medical images. MongoDB stores data in collections of documents, which are JSON-like structures that allow for flexible and efficient data storage and retrieval. In the proposed system architecture, MongoDB will be used to store and manage pre-processed medical image data.</p>
+
+<p>The medical images will be pre-processed to extract features relevant to disease diagnosis, and the resulting features will be stored as documents in MongoDB collections. Each document will represent a single medical image and will include the extracted features, metadata such as patient ID, and other relevant information.</p>
+
+MongoDB provides several features that are beneficial for managing and analyzing large datasets, including:
+	<ul>
+<li>Scalability: MongoDB is highly scalable and can handle large volumes of data, making it suitable for storing medical image data.</li>
+
+<li>Indexing: MongoDB supports indexing, which allows for fast retrieval of data based on specific criteria. This feature is essential for efficient querying of medical image data.</li>
+
+<li>Aggregation: MongoDB supports powerful aggregation capabilities, which enable complex data analysis and processing.</li>
+	</ul>
+<br>
+<li>Data Analysis:</li>
+<br>
+<p>MongoDB provides several features that facilitate data analysis, including indexing, aggregation, and real-time querying capabilities. The data analysis will be performed using Python-based data analysis libraries such as NumPy, Pandas, and Scikit-learn, which provide a wide range of data analysis tools, including data cleaning, preprocessing, feature selection, and feature extraction. These libraries will be used to manipulate and analyze the data stored in MongoDB, enabling the extraction of meaningful insights and patterns from the data. Data visualization tools such as Matplotlib and Plotly will be used to visualize the results of the data analysis.</p>
+<br>
+<li>Hardware and Software Requirements:</li>
+<br>
+<p>To support the use of MongoDB in the proposed system architecture, the following hardware and software requirements will be needed:</p>
+	<ul>
+<li>A dedicated server: MongoDB requires a dedicated server with sufficient storage capacity and processing power to handle large volumes of medical image data. The server should have at least 16 GB of RAM, a multi-core CPU, and sufficient disk space to store the data.</li>
+
+<li>MongoDB database: The MongoDB database will need to be installed and configured on the dedicated server. MongoDB can be installed on Windows, macOS, and Linux operating systems.</li>
+
+<li>Python: The system will require a Python installation with the appropriate libraries and packages for interacting with the MongoDB database. The recommended package for this is PyMongo, which provides a Python API for interacting with MongoDB.</li>
+
+<li>Data pre-processing software: Before storing the medical images in MongoDB, they will need to be pre-processed to extract relevant features. This will require the use of software tools such as OpenCV or TensorFlow, depending on the specific feature extraction technique being used.</li>
+	</ul>
+</ol>
+
+___
+
+The proposed system architecture will employ various tools and frameworks for data visualization and analysis, including:
+ | Tools/Frameworks | Description |
+ | ------------- | ------------- |
+| Matplotlib | Matplotlib is a popular data visualization library for Python. It provides a wide range of functions for creating visualizations such as line charts, bar charts, scatterplots, and histograms. Matplotlib can also be used to create customized visualizations to meet specific requirements. |
+| Plotly | Plotly is a web-based data visualization framework that allows for the creation of interactive visualizations. It provides a wide range of chart types, including 3D charts, scatterplots, and heatmaps. Plotly is highly customizable and supports the creation of customized dashboards for data exploration and analysis. |
+| Seaborn | Seaborn is a data visualization library that is built on top of Matplotlib. It provides a high-level interface for creating statistical graphics such as heatmaps, regression plots, and distribution plots. Seaborn is highly customizable and supports the creation of complex visualizations with minimal coding. |
+| Tableau | Tableau is a data visualization and business intelligence tool that allows for the creation of interactive dashboards and reports. Tableau provides a wide range of chart types, including bar charts, line charts, and scatterplots. It also supports the integration of multiple data sources, allowing for the creation of comprehensive dashboards for data analysis. |
+| Scikit-learn | Scikit-learn is a popular machine learning library for Python. It provides a wide range of machine learning algorithms for tasks such as classification, regression, clustering, and dimensionality reduction. Scikit-learn also provides tools for data preprocessing, feature selection, and model evaluation. |
+| Pandas | Pandas is a Python library for data manipulation and analysis. It provides data structures for efficiently handling and manipulating large datasets, including time series data. Pandas also supports data visualization using Matplotlib. |
+| NumPy | NumPy is a Python library for scientific computing. It provides support for large, multi-dimensional arrays and matrices, along with a wide range of mathematical functions. NumPy is often used in conjunction with other data analysis libraries such as Pandas and Scikit-learn. |
+
+___
+
+Flowchart of the CAD System Architecture::
 ```mermaid
 graph TD;
-    A[Data Storage and Management]-->B[Machine Learning Model Training and Evaluation];
-    B[Machine Learning Model Training and Evaluation]-->C[CAD System Interface];
+    A[Data Collection]-->B[Pre-processing];
+    B[Pre-processing]-->C[Data Analysis];
+    C[Data Analysis]-->D[Feature Extraction using CNNs];
+    D[Feature Extraction using CNNs]-->E[Machine Learning using SVMs or Random Forests];
+    E[Machine Learning using SVMs or Random Forests]-->F[Model Evaluation and Optimization];
+    F[Model Evaluation and Optimization]-->G[Integration into a CAD System using Flask];
+    G[Integration into a CAD System using Flask]-->H[User Interface Development];
+    H[User Interface Development]-->I[Data Visualization using Plotly and Matplotlib];
+    I[Data Visualization using Plotly and Matplotlib]-->J[Deployment on a Dedicated Server];
+    J[Deployment on a Dedicated Server]-->K[Maintenance and Upgrades as necessary];
 ```
 
-## 7. 🛑 Risks and Limitations:
+## 🛑 Risks and Limitations:
 
 Even though analyzing medical images for disease diagnosis gives a lot of advantages both to doctors and patients, this process also poses several risks and limitations that should be considered. Below are points for technical, financial and legal risks:
 
@@ -131,7 +207,7 @@ Even though analyzing medical images for disease diagnosis gives a lot of advant
 </ul>
 </ol>
 
-## 8. ⏳ Deliverables and Milestones:
+## ⏳ Deliverables and Milestones:
 
 <table border="1" align="center">
   <tr>
@@ -166,7 +242,7 @@ Even though analyzing medical images for disease diagnosis gives a lot of advant
 
 
 
-## 9. 📚 Resources:
+## 📚 Resources:
 
 <ol>
   <li>
@@ -209,7 +285,7 @@ Even though analyzing medical images for disease diagnosis gives a lot of advant
 </ol>
 
 
-## 10. 🧰 Technical Specifications:
+## 🧰 Technical Specifications:
 
 <ol>
 <li>Data Schema:</li>
@@ -253,7 +329,7 @@ Even though analyzing medical images for disease diagnosis gives a lot of advant
 </ul>
 </ol>
 
-## 11. 🏁 Timeline and Deliverables: 
+## 🏁 Timeline and Deliverables: 
 <ol>
 	<li>Detailed Timeline:</li>
 </ol>
@@ -288,6 +364,6 @@ Even though analyzing medical images for disease diagnosis gives a lot of advant
 </ul>
 
 
-## 12. 📄 Conclusion:
+## 📄 Conclusion:
 
 In conclusion, our proposed solution for automating the diagnosis of pneumonia through machine learning algorithms has the potential to revolutionize the medical field. By leveraging state-of-the-art technology and techniques, we aim to provide a robust and accurate diagnostic tool for medical professionals to assist in making informed decisions about patient care. Our project timeline, deliverables, and technical specifications have been carefully planned to make sure the project is executed efficiently and effectively. We are confident in our ability to deliver high-quality results within the proposed timeframe and budget. However, we recognize that challenges and limitations may arise during the project, such as data quality issues or hardware constraints. We believe that our proposed solution has the potential to make a significant impact in the medical field, and we are excited about the prospect of working on this project.
