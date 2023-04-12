@@ -51,8 +51,8 @@ However, modern technology can help to solve this problem effectively. Therefore
 
 - To determine sales trends.
 - To provide real-time information on sales.
-- To monitor the most important metrics and KPIs
-- To identify which products are selling well and which are not
+- To monitor the most important metrics and KPIs.
+- To identify which products are selling well and which are not.
 - To optimize pricing strategies.
 
 This will be significant for online sellers to track their progress and quickly respond to any changes by getting insights and analytics on e-commerce data. 
@@ -60,7 +60,8 @@ This will be significant for online sellers to track their progress and quickly 
 
 ## 🔭Scope
 
-This project will develop an e-commerce analytics dashboard to analyze the sales performance of Shopee in order for businesses to obtain valuable insights and look to optimize their online sales and marketing efforts.
+This project will develop an e-commerce analytics dashboard to analyze the sales performance of Shopee Supermarket in order for businesses to obtain valuable insights and look to optimize their online sales and marketing efforts.
+
 - The data that will be used in this project is collected from <a href="https://shopee.com.my/">Shopee</a> Malaysia. It is an e-commerce platform that sells a variety of categories of products like Home & Living, Health & Beauty and Electronics.
  
 - Web scraping tool is used to extract product information from Shopee. The extracted data will be processed and analyzed. 
@@ -74,7 +75,7 @@ This project will develop an e-commerce analytics dashboard to analyze the sales
 
 ## 🔍Methodology
 
-1. `Data Collection:` First and foremost is data collection. We will collect data such as price, item sold and profit about products from Shopee Supermarket. All of the data sales can be retrieved by using Shopee Open Platform or Shopee's API
+1. `Data Collection:` First and foremost is data collection. We will collect data such as price, item sold and profit about products from Shopee Supermarket. All of the data sales can be retrieved by using web scraping method.
 
 2. `Data Preparation:` This step includes **data cleaning** and **data transforming** process where all retrieved data will be cleaned in order to make sure there are no noisy and dirty data. Hence, the quality of the data increases which later will produce more complete, accurate and consistent result. Then, transform the format of the data if needed.
 
@@ -82,35 +83,147 @@ This project will develop an e-commerce analytics dashboard to analyze the sales
 
 4. `Machine Learning Algorithms:` Next, machine learning algorithms can be used to predict customer satisfaction based on the data collected. This can be done by building a model using supervised learning techniques such as regression or classification.
 
-5. `Data Visualization:` The final step is to present the results of the analysis and machine learning algorithms using data visualization techniques. This can be done using tools such as Tableau or Python libraries such as Matplotlib or Seaborn.
+5. `Data Visualization:` The final step is to present the results of the analysis and machine learning algorithms using data visualization techniques. This can be done using tools such as Power BI or Python libraries such as Matplotlib and Seaborn.
 
 
 ## 🔧System Architecture
 
-- Provide a detailed overview of the proposed system architecture including the tools and technologies that will be used to develop and deploy the system
-
-- Explain how the data will be stored, managed, and analyzed using MongoDB, as well as the hardware and software requirements needed to support the system.
-
-- Discuss the tools and frameworks that will be used for data visualization and analysis.
-
-- Provide a flowchart or block diagram of the system architecture.
-
-<table>
-  <tr>
-    <th>Data collection</th>
-    <td></td>
-  </tr>
-</table>
+**Proposed system architecture for the Shopee Supermarket Sales Performance Dashboard:**
 
 ```mermaid
+%%{
+  init: {
+    'theme': 'base',
+    'themeVariables': {
+      'primaryColor': '#e76f51',
+      'primaryTextColor': '#d9d9d9',
+      'primaryBorderColor': '#e76f51',
+      'lineColor': '#d9d9d9',
+      'secondaryColor': '#284b63',
+      'tertiaryColor': '#d9d9d9'
+    }
+  }
+}%%
 
-flowchart LR;
-    id1[Shopee Application] --> id2[API Gateway]
-    id2[API Gateway] --> id3[Data Collection]
-    id3[Data Collection] --> id4[Data Storage]
-    id4[Data Storage] --> id5[Data Analysis]
+flowchart TD;
+    id1[Beautiful Soup Web Scraper]<--Get transactional and inventory data-->id2[Shopee Malaysia]
+    id1[Beautiful Soup Web Scraper] --Store Data--> id3[(MongoDB)]
+    id3[(MongoDB)] --Process and analyse data using Python--> id7[Visual Studio Code]
+    id7[Visual Studio Code] --Store processed data--> id3[(MongoDB)]
+    id3[(MongoDB)] --Visualise data into dashboard, reports and charts--> id4[Power BI]
+    id4[Power BI] --Deploy a platform and user interface to access dashboard--> id5[Django]
+    id5[Django] --> id6[Public Interest]
 ```
-  
+
+<table align=center>
+  <tr>
+    <th>Components</th>
+    <th>Details</th>
+    <th>Tools/Technologies</th>
+  </tr>
+  <tr>
+    <td>Data Sources</td>
+    <td>Data are gathered from Shopee Malaysia Website to provide raw data for analysis.<br></br>
+    <ol>
+    <li>Shopee Supermarket transactional data: sales transactions, product details, and category details.</li>
+    <li>Shopee Supermarket inventory data: product availability, pricing, and promotions.</li></ol>
+    </td>
+    <td>
+      <li>Beautiful Soup</li>
+      <li>Python</li>  
+    </td>
+  </tr>
+  <tr>
+    <td>Data Storage</td>
+    <td>Storing the prepared data in a data warehouse or a data lake. This data will be stored in a format that is optimized for fast querying and analysis.</td>
+    <td><li>MongoDB</li></td>
+  </tr>
+  <tr>
+    <td>Data Processing and Analysis</td> 
+    <td>Once the data is collected and stored, it needs to be preprocessed and transformed into a format that can be analyzed. This involves data cleaning, normalization, transformation, etc. The data analysis will include the following:
+      <ol>
+      <li>Descriptive analytics: Analyzing historical data to identify trends, patterns, and anomalies in sales performance.</li>     
+      <li>Diagnostic analytics: Identifying the factors contributing to sales performance, such as product availability, pricing, and promotions.</li>
+      <li>Predictive analytics: Using machine learning algorithms to predict future sales performance based on historical data and other factors.</li>
+      <li>Prescriptive analytics: Recommending actions to optimize sales performance, such as adjusting pricing, promotions, and product availability.</li>
+      </ol></td>
+    <td>
+          <li>Visual Studio Code</li>    
+          <li>Python</li>
+          <li>Pandas library for data manipulation and cleaning</li>
+          <li>NumPy library for mathematical operations on arrays</li>
+          <li>Matplotlib, Seaborn, or Plotly for data visualization</li>
+          <li>Scikit-learn for machine learning algorithms</li>
+     </td>
+  </tr>
+  <tr>
+    <td>Visualization</td>
+    <td>Present the results of the data analysis in the following format:
+      <ol><li>Dashboards: A high-level view of sales performance, such as overall sales, top-performing products and categories, and seasonal trends.</li>
+      <li>Reports: A detailed sales performance analysis, such as sales by product, and category.</li>
+      <li>Charts and graphs: This will provide visual representations of the data, such as line charts, bar charts, and pie charts.</li>
+  </td>
+    <td><li>Power BI</li></td>
+  </tr>
+  <tr>
+    <td>User Interface</td>
+    <td>Provide an interactive platform for users to access the data visualization and make informed decisions.</td>
+    <td rowspan='2'><li>Django</li></td>
+  </tr>
+   <tr>
+    <td>Web Deployment</td>
+    <td>Deploy the dashboard on a suitable platform and ensure that monitoring tools are in place to detect and address any issues that may arise.</td>
+  </tr>
+</table>
+<br>
+
+<b>To store, manage, and analyze data using MongoDB, the following steps can be taken:</b>
+
+<table align=center>
+  <tr>
+    <th>Steps</th>
+    <th>Descriptions</th>
+  </tr>
+  <tr>
+    <td>Data modeling</td>
+    <td>Create a data model that fits the structure of the data and the analysis needs. In MongoDB, the data is stored as documents, which can be nested and have different fields. A data model should be designed based on the types of data sources and analysis requirements.</td>
+  </tr>
+  <tr>
+    <td>Data storage</td>
+    <td>MongoDB can be installed on-premises or in the cloud, such as on AWS or Microsoft Azure. The hardware requirements depend on the data size and the traffic volume. For example, MongoDB recommends at least 8 GB of RAM for a production deployment. The storage can be provisioned using a distributed file system such as Amazon EBS or Google Persistent Disk.</td>
+  </tr>
+  <tr>
+    <td>Data analysis</td>
+    <td>MongoDB has a rich set of querying capabilities, such as aggregation pipeline, full-text search, and geospatial queries. MongoDB can also be integrated with programming languages such as Python, Java, and JavaScript.</td>
+  </tr>
+  <tr>
+    <td>Data visualization</td>
+    <td>The analyzed data can be visualized using tools such as Power BI. The visualization tools can be integrated with MongoDB using MongoDB Connector for BI.</td>
+  </tr>
+</table>
+<br>
+
+<b>The hardware and software requirements for MongoDB</b>
+
+<table align=center>
+  <tr>
+    <th>Hardware Requirements</th>
+    <th>Software Requirements</th>
+  </tr>
+  <tr>
+    <td>CPU: 4-core, 2.5 GHz or higher</td>
+    <td>Linux, Windows, and macOS</td>
+  </tr>
+  <tr>
+    <td>RAM: 16 GB or higher</td>
+    <td>MongoDB server, drivers, Compass, and BI Connector</td>
+  </tr>
+  <tr>
+    <td>Storage: 500 GB or higher, preferably using SSDs</td>
+    <td>Third-party tools such as Python, R, or SQL for data analysis</td>
+  </tr>
+</table>
+<br>
 
 ## 📊Risks and Limitations
 
@@ -167,11 +280,11 @@ The key deliverables and milestones:
 
 **1. Data collection and cleaning**
      
-This involves gathering sales data from Shopee Supermarket, such as product name, price and quantity sold by using APIs provided and display data in real time using MongoDB's real-time data ingestion. Following the collection of  data, data pre-processing tasks such as cleaning, filtering, and transforming the data into usable format will be performed.
+This involves gathering sales data from Shopee Supermarket, such as product name, price and quantity sold by using web scraping. Following the collection of  data, data pre-processing tasks such as cleaning, filtering, and transforming the data into usable format will be performed.
 
 **2. Data analysis and modeling**
 
-Analyze the sales data by grouping the data and calculating metrics with MongoDB's integration framework. This entails analysing the data using statistical and machine learning techniques and developing models that can be used to make predictions.
+Analyze the sales data by grouping the data and calculating metrics with MongoDB's integration framework. This entails analysing the data using statistical and machine learning techniques and developing models.
 
 **3. Dashboard design and development**
 
@@ -218,38 +331,35 @@ The resources needs as below:
 
 - Staff
 
-   - Data Scientist: 
+   - Data Scientist
 
-   - Data Engineer:
+   - Data Engineer
+ 
+   - Database Administrator
 
-   - Project Manager:
+   - Project Manager
+ 
+   - UX/UI Designer
 
 - Equipment
    - Computer/Laptop
  
 - Software
-   - Shopee API 
+   - Python and libraries
    - MongoDB
    - Django/Visual Studio Code
    - Power BI
   
 - Other expenses
-  - The cost of the software
+  - Software cost (if needed)
 
 ## 📱Technical Specifications
 
-- Discuss the technical specifications of the proposed data science project, including data sources, data schema, data transformations, machine learning algorithms, data visualization tools, and other technical details.
-
-- Mention the programming languages, frameworks, and libraries that will be used in the project.
-
-- Provide details about the hardware and software requirements for the proposed system.
-
-- Explain the data security measures that will be implemented.
 
 <table>
   <tr>
     <th>Data sources</th>
-    <td>Extracted data from Shopee Supermarket Malaysia </td>
+    <td>Extracted data from Shopee Supermarket Malaysia by performing web scraping</td>
   </tr>
   <tr>
     <th>Data schema</th>
@@ -288,9 +398,6 @@ The resources needs as below:
       <li>Processor: 2 GHz or more</li>
       <li>Storage: 25 GB or more free disk space</li>
       <li>Web browser</li>
-      <li>Domain name</li>
-      <li>Ethernet connection (LAN) or wireless adapter (Wi-Fi)</li>
-
     </td>
   </tr>
   <tr>
@@ -298,10 +405,7 @@ The resources needs as below:
     <td>
       <li>Power BI</li>
       <li>MongoDB</li>
-      <li>Shopee API</li>
       <li>Visual Studio Code</li>
-      <li>Shopee data scraper</li>
-      <li>Python 3.8 r higher with included libraries</li>
     </td>
   </tr>
   <tr>
@@ -313,19 +417,11 @@ The resources needs as below:
       <li>Enable access control on MongoDB</li>
       <li>Use a firewall / security groups (if in cloud)</li>
       <li>Use strong password for authentication and authorization of MongoDB</li>
-      <li>Secure servers by lock down to access so that only certain IP addresses are allowed to use it.</li>
-      <li>Disable listening to all ethernet interfaces (only bind MongoDB ports to the interfaces that intended to exposed)</li>
     </td>
   </tr>
 </table>
 
 ## ⌚Timeline and Deliverables
-
-- Provide a detailed timeline for the project, including milestones and deadlines.
-
-- Specify the deliverables that will be provided at each milestone. It should also specify the expected time frame for each deliverable and the resources that will be required to complete the project.
-
-- Explain the quality assurance and testing procedures that will be followed.
 
 <div class="mermaid">
   
@@ -335,58 +431,106 @@ gantt
     dateFormat  YYYY-MM-DD
   
     section Data Gathering and Cleaning
-    Data Gathering  :2023-04-02 , 10d
-    Data Cleaning  :2023-04-12 , 4d
+    Data Gathering  :2023-04-02 , 19d
+    Data Cleaning  :2023-04-30 , 7d
   
-    section Dashboard Analysis and Modeling
-    Dashboard Analysis            :2023-04-16  , 5d
-    Dashboard Modeling                    :2023-04-30 , 7d
-   
+    section Data Analysis and Modeling
+    Data Analysis            :2023-05-07  , 7d
+    Data Modeling                    :2023-05-14 , 7d
   
-    section Data Design and Development
-    Data Design               :2023-05-07 , 7d
-    Data Development       :2023-05-14 , 14d
-  
-    section Integration with E-Commerce Platform
-    Designing User interface            :2023-05-28 , 4d
-    Features add-ons             :2023-06-01 , 10d
-  
+    section Dashboard Design and Development
+    Dashboard Design               :2023-05-21 , 7d
+    Dashboard Development       :2023-05-28 , 14d
+ 
     section Testing and Debugging
     Live Testing                :2023-06-11 , 2d
     Debugging     :2023-06-13 , 5d
   
     section Dashboard deployed and live
-    Dashboard deployed      :2023-06-18 , 3d
+    Dashboard deployed      :2023-06-18  , 3d
     Dashboard live      :2023-06-21 , 4d
   
   ```
   </div>
 
-  - WEEK 1 - 4 : `Data Gathering and Cleaning`
+<br>
 
-  > - Gather product data through web scraping process and store the data in MongoDB.
+**1. Detailed timeline**
+
+- WEEK 3 - 7 : `Data Gathering and Cleaning`
+  > - Gather product data and store the data in MongoDB.
   > - Clean the data to remove any inconsistencies or anomalies.
   
-- WEEK 5 - 6 : `Dashboard Analysis and Modeling`
+- WEEK 8 - 9 : `Data Analysis and Modeling`
 
-  > - Analysis
-  > - Modeling
+  > - Perform EDA and data modeling to discover the market trend.
+    
+- WEEK 10 - 12 : `Dashboard Design and Development`
+
+  > - Design and development the dashboard to visualize the product summary in Shopee.
   
-- WEEK 7 - 10 : ` Data Design and Development`
+- WEEK 13 : `Testing and Debugging`
 
-  > Design.
+  > - Test the dashboard whether it can working properly or not and ensure that it is ready to be used.
+  > - Identify errors and remove those errors if there exist.
+
+- WEEK 14 : `Dashboard deployed and live`
+
+  > - Deploy dashboard and make it live where it should change constantly according to the incoming(live) data monthly.
   
-- WEEK 11 : `Integration with E-Commerce Platform`
+<br>
 
-  > Integration with E-Commerce Platform
+**2. Deliverables and resources**
+
+Data Gathering and Cleaning
+  - Deliverables : Cleaned and structured Shopee Supermarket data
+  - Resources :  Web-scraper, MongoDB, Visual Studio Code
   
-- WEEK 12 - 14 : `Testing and Debugging`
+Data Analysis and Modeling
 
-  > Testing and Debugging.
+  - Deliverables : A conceptual representation of data objects, relationships between them, and the rules that govern data manipulation.
+  - Resources : Visual Studio Code
+    
+Dashboard Design and Development
+  - Deliverables : Dashboard on the web
+  - Resources : MongoDB, Power BI
+  
+Testing and Debugging
 
-- WEEK 12 - 14 : `Dashboard deployed and live`
+  - Deliverables : A high quality and reliable dashboard  
+  - Resources : Visual Studio Code, Django
 
-  > Dashboard deployed and live.
+Dashboard deployed and live
+
+  - Deliverables : A functional and complete dashboard
+  - Resources : Django
+  
+<br>
+ 
+**3. Quality assurance and testing procedures**
+
+To guarantee that an ecommerce analysis dashboard complies with the necessary standards and provides accurate and reliable data, quality assurance and testing processes are essential. 
+
+- 1. Data Validation: The process of validating the accuracy and completeness of the data gathered by the ecommerce analytics dashboard is known as data validation. This involves making sure the data is accurate, complete, and consistent.
+
+- 2. Continuous Monitoring: This is to make sure the ecommerce analytics dashboard is functioning properly and giving accurate data.
+
+- 3. Functional testing: This process makes sure the dashboard works as intended. To ensure they function properly, all the features and connections must be tested.
+
+- 4. Compatibility Testing: This process verifies that the dashboard is functional on all widely used platforms and is compatible with a variety of browsers.
+
+- 5. Performance testing: Performance testing analyzes the dashboard's speed and performance under various loads to make sure it can manage a lot of users and data.
+
+- 6. Security testing: Security testing makes sure that confidential data is protected and that the dashboard is safe from unauthorised access. This involves  testing data encryption, user identification, and other security features.
+
+- 7. Usability testing: Usability testing determines how simple and user-friendly the interface is to use and how easy it is to understand. This includes testing the dashboard's navigation, layout, and overall user experience.
+
+- 8. Regression Testing: Regression testing is used to make sure that new dashboard features or modifications would not have an impact on existing functionality.
+
+- 9. User Acceptance Testing: In user acceptance testing, a group of users who represent the intended target audience test the dashboard. This can assure that the dashboard meets their needs and expectations.
+
+As a result of following these testing procedures, we can make sure that our ecommerce analysis dashboard is high quality, reliable, and offers valuable insights to the customers.
+<br>
 
 ## 🎓Conclusion
 

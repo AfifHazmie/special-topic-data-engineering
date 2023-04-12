@@ -74,26 +74,123 @@ This project will develop an healthcare analytics platform that will leverage pr
   
 
 ## 🔧 System Architecture
+<b>Flowchart of system architecture:</b><br>
+<p align='center'>
+<img src='https://github.com/drshahizan/special-topic-data-engineering/blob/bdc3350dc8a21d41a13bde0b8a96b30737f10408/project/proposal/MichelinStar/flowchart_ver4.jpg'>
+</p><br>
 
-- Provide a detailed overview of the proposed system architecture including the tools and technologies that will be used to develop and deploy the system
-
-- Explain how the data will be stored, managed, and analyzed using MongoDB, as well as the hardware and software requirements needed to support the system.
-
-- Discuss the tools and frameworks that will be used for data visualization and analysis.
-
-- Provide a flowchart or block diagram of the system architecture.
-
-<b>Overview of system architecture</b><br>
+<b>Overview of system architecture:</b><br>
 <table>
 <tr>
-  <td><b>1. Data Collection</b></td>
-  <td>Collect the healthcare data from Kaggle and download them in csv format. </td>
+  <td><b>1. Data acquisition</b></td>
+  <td>Collect the healthcare data from Kaggle and download them in <b>csv</b> format. </td>
 </tr>
 <tr>
   <td><b>2. Data storage</b></td>
-  <td>Upload the collected data to the </td>
+  <td>Upload the collected data to the <b>MongoDB</b>, a NoSQL database which is capable in handling various types and high volume of data. </td>
+</tr>
+<tr>
+  <td><b>3. Data preprocessing</b></td>
+  <td>Perform data cleaning process using the <b>Pandas</b> and <b>Numpy</b> libraries to remove, modify and format data which is irrelevant, duplicated or incorrect. This is a significant step to ensure data quality of the building of machine learning model later. </td>
+</tr>
+<tr>
+  <td><b>4. Exploratory Data Analysis (EDA)</b></td>
+  <td>In this step, we can identify: 
+  <li>the relationship between the features through visualisation using <b>Matpoltlib, Seaborn</b> and any other graph plottiong libraries</li> 
+  <li>the occurance of outliers</li>
+  <li>the summary of the statistics of the dataset using <b>Pandas</b> and <b>Numpy</b></li>
+  <li>the hidden correlation between the features which we overlooked </li></td>
+</tr>
+<tr>
+  <td><b>5. Feture engineering</b></td>
+  <td>Feature engineering aims to transform the features in EDA into features which is suitable for building machine learning model. <b>Pandas, Numpy</b> and <b>Scikit-learn</b> are used to handle missing values, skewness, outliers, and imbalance data, scaling down the features and creating new features from existing features for the further steps. </td>
+</tr>
+<tr>
+  <td><b>6. Feature selection</b></td>
+  <td>Feature selection is a process in choosing the best set of independent features which are required in model training. It is important in improving the machine learning model performance, reducing the training time of the algorithms and enhance the generalization of the model.</td>
+</tr>
+<tr>
+  <td><b>7. Model building</b></td>
+  <td>We choose to build a <b>classification</b> model using the selected dataset in order to help medical-related person in predicting the diagonis result according to the patient's symptoms. The dataset will be split into 3 sets which are train set (to train the algorithms), validation set (to optimise the model) and test set (to evaluate the model). </td>
+</tr>
+<tr>
+  <td><b>8. Model evaluation</b></td>
+  <td>The model built will then be evaluated using the <b>Scikit-learn</b> library. Since we are doing classification model, we choose to evaluate our model using the confusion matrix, where we can conclude the level of accuracy, precision, and recall. </td>
+</tr>
+<tr>
+  <td><b>9. Model deployment</b></td>
+  <td>The <b>Django</b> web framework will be used to built a web application which allows user to enter the symptoms of the patient and obtain prediction from the classification model. </td>
+</tr>
+<tr>
+  <td><b>10. Model monitoring and maintenance</b></td>
+  <td>The <b>MLflow</b> platform is chosen for the purpose of monitor and maintenance of the model. We can carry out tracking experiments, package code into reproducible runs, share and deploy the model through MLflow. </td>
+</tr>
+</table><br>
+<b>Storing, managing and analysing data using MongoDB:</b><br>
+<table>
+<tr>
+<td><b>Storing data</b></td>
+<td>
+The steps to store csv files into MongoDB are shown as below: <br>
+1. Install <code>pymongo</code> and <code>csv</code> pacakages using <code>pip install</code>.<br>
+2. Connect to the MongoDB server using <code>pymongo</code> package, then create a new database and collection. <br>
+3. Use the <code>csv</code> package to read the csv file, converts each row into one dictionary, and insert them into the collection of the database. <br>
+4. Verify the inserted data by querying the collection. 
+</td>
+</tr>
+<tr>
+<td><b>Managing data</b></td>
+<td>
+Data can be managed by MongoDB through a few aspects including querying data, backup and restoring data, and ensuring security of data. Data can be queried through the CRUD operations which stands for creating, reading, updating and deleting data. MongoDB supports the creation of indexes which aid in improving query performance. 
+
+Data availability can be ensured by using the backup and restoring tools of MongoDB. MongoDB also provide authentication and authorization process to avoid unauthorized access and data encryption in order to enhance the data security. 
+</td>
+</tr>
+<tr>
+<td><b>Analysing data</b></td>
+<td>
+To analyse the data, we can use the aggregation function in MongoDB which is a pipeline-based framework to carry out complex data analysis through grouping, filtering and tramsforming data in the collection. 
+</td>
+</tr>
+</table><br>
+
+<b>Requirements to support MongoDB: </b><br>
+<ul>
+<li>
+Hardware requirements: <br>
+A device with:
+<ul>
+<li>64-bit processor</li>
+<li>at least 4 GB of RAM</li> <li>at least 10 GB of free disk space</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li>Software requirements: <br>
+MongoDB is compatible with:  
+<table> 
+<tr>
+<td>operating system</td> <td>Linux / Windows / macOS</td>
+</tr>
+<tr>
+<td>programming languages</td> <td>Python</td>
+</tr>
+<tr>
+<td>framework</td> 
+<td>Django</td>
+</tr>
+<tr>
+<td>Graphical User Interfaces (GUI)</td> 
+<td>MongoDB Atlas / MongoDB Compass</td>
+</tr>
+<tr>
+<td>integrated development environment (IDE)</td> <td>VS Code</td>
 </tr>
 </table>
+</li>
+</ul><br>
+
+
 
   
 
@@ -130,13 +227,27 @@ Here are some potential risks and limitations associated with heart disease pred
 ## 🔑 Deliverables and Milestones
 
 **Deliverables:**
-1. Project Proposal: A proposal that outlines the goals, scope, and methodology of the project will be created for the system.
-2. Data Collection and Preprocessing: After the collection of data, the data will be clean for further analysis.
-3. Exploratory Data Analysis: A report on the statistical properties and characteristics of the dataset will be created.
-4. Machine Learning Model Development: A machine learning model that can predict the presence of heart disease.
-5. Model Evaluation: An evaluation of the performance of the machine learning model.
-6. Deployment: A web application or API that can take in patient data and provide a heart disease prediction.
-7. Maintenance & Monitoring: After the system had been created, we need to maintain and monitor the system to ensure the system can ran smoothly without any error.
+
+**1. Project Proposal**
+- A proposal that outlines the goals, scope, and methodology of the project will be created for the system.
+
+**2. Data Collection and Preprocessing**
+- After the collection of data, the data will be clean for further analysis.
+
+**3. Exploratory Data Analysis**
+- A report on the statistical properties and characteristics of the dataset will be created.
+
+**4. Machine Learning Model Development**
+- A machine learning model that can predict the presence of heart disease.
+
+**5. Model Evaluation**
+- An evaluation of the performance of the machine learning model.
+
+**6. Deployment**
+- A web application or API that can take in patient data and provide a heart disease prediction.
+
+**7. Maintenance & Monitoring**
+- After the system had been created, we need to maintain and monitor the system to ensure the system can ran smoothly without any error.
 
 
  **Milestones:**
@@ -164,69 +275,153 @@ The resources needs as below:
 
 - Staff
 
-   - Data Scientist: 
+   - <strong>Data Scientist</strong>: Data Scientist need to make some of the data analysis and statistical analysis for the system.
 
-   - Data Engineer:
+   - <strong>Data Engineer</strong>: Data Engineer need to design data architecture, develope data pipelines and of course ensuring data quality for the system.
 
-   - Project Manager:
+   - <strong>Project Manager</strong>: Project Manager need to handle project planning, risk management, resource allocation, communication and team management to create the system.
+  
+   - <strong>UI/UX Designer</strong>: UI/UX Designer need to design the user interface for web application and make it comfortable for user's operation.
 
 - Equipment
    - Computer
    - Laptop
+
 - Software
-   - Kaggle
-   - Github
-   - MangoDB
- 
+   - <strong>Kaggle Datasets</strong>: Kaggle Datasets is a collection of public datasets that you can use for machine learning tasks, including heart disease prediction. The datasets are hosted on Kaggle and can be easily downloaded and used in your machine learning models.
+
+   - <strong>MongoDB</strong>: MongoDB is a NoSQL database that can be used in machine learning applications in several ways. MongoDB can be used to store and manage large volumes of data for machine learning applications, including heart disease prediction. It is highly scalable and can handle structured, semi-structured, and unstructured data.
+
+   - <strong>TensorFlow</strong>: TensorFlow is an open-source machine learning framework developed by Google. It has a large community of developers and supports a wide range of machine learning tasks, including heart disease prediction.
+
+   - <strong>Scikit-learn</strong>: Scikit-learn is a popular machine learning library in Python, and has several algorithms for classification tasks. It is easy to use and has good documentation.
+
+   - <strong>Visual Studio Code</strong>: Make collaboration with teammates and upload the code to Github by syncing them together. It is easy to track teammates progress and work together. 
+  
+   - <strong>Github/Git</strong>: Github is an Internet hosting service for software development and version control using Git. It provides the distributed version control of Git plus access control, bug tracking, software feature requests, task management, continuous integration, and wikis for every project.
+
+  
 - Other expenses
+  - Cloud computing costs
+  - Annotation costs
    
 
 ## 📱 Technical Specifications
 
-- Discuss the technical specifications of the proposed data science project, including data sources, data schema, data transformations, machine learning algorithms, data visualization tools, and other technical details.
-
-- Mention the programming languages, frameworks, and libraries that will be used in the project.
-
-- Provide details about the hardware and software requirements for the proposed system.
-
-- Explain the data security measures that will be implemented.
-
 <table>
   <tr>
-    <th>Data sources</th>
-    <td>-</td>
+    <td>Data sources</td>
+    <td>Framingham heart disease dataset from Kaggle</td>
   </tr>
   <tr>
-    <th>Data schema</th>
-    <td>-</td>
+    <td>Data schema</td>
+    <td>Patient data: gender, age, education, cigarette intake, symptoms of the disease, BMI, risk of future coronary heart disease (CHD)</td>
   </tr>
   <tr>
-    <th>Data transformations</th>
-    <td>-</td>
+    <td>Data transformations</td>
+    <td>Python libraries: 
+    <li>Pandas</li>
+    <li>Numpy</li>
+    </td>
   </tr>
   <tr>
-    <th>ML algorithms</th>
-    <td>-</td>
+    <td>ML algorithms</td>
+    <td>Scikit-learn</td>
   </tr>
   <tr>
-    <th>Data visualization tools</th>
-    <td>-</td>
+    <td>Data visualization tools</td>
+    <td>Python visualisation libraries: 
+    <li>Matplotlib</li>
+    <li>Seaborn</li>
+    <li>Plotly</li>
+    <li>PowerBI</li>
+    </td>
   </tr>
   <tr>
-    <th>Other</th>
-    <td>-</td>
+    <td>Programming Languages</td>
+    <td>
+    <li>Python</li>
+    <li>MongoDB Query Language (MQL)</li>
+    <li>CSS</li>
+    <li>HTML</li>
+    </td>
+  </tr>
+  <tr>
+    <td>Hardware requirements</td>
+    <td>
+    <li>Windows operating system</li>
+    <li>64-bit processor</li>
+    <li>at least 4 GB of RAM</li>
+    <li>at least 10 GB of free disk space</li>
+    </td>
+  </tr>
+  <tr>
+    <td>Software requirements</td>
+    <td>
+    <li>Linux / Windows / macOS operating system</li>
+    <li>Django framework</li>
+    <li>MongoDB Atlas / MongoDB Compass GUI</li>
+    <li>VS Code IDE</li>
+    </td>
+  </tr>
+  <tr>
+    <td>Data security measures</td>
+    <td>
+    <li>Control the users' access to data according to their role and responsibility through user authentication</li>
+    <li>Encrypt the data</li>
+    <li>Backup the data regularly to prevent data lost due to unexpected disaster</li>
+    <li>Enable firewall to protect the system from cyber attacks</li>
+    <li>Consitently change the access password to prevent unnecessary password leakage</li>
+    </td>
   </tr>
 </table>
 
 ## ⌚ Timeline and Deliverables
-
-- Provide a detailed timeline for the project, including milestones and deadlines.
-
-- Specify the deliverables that will be provided at each milestone. It should also specify the expected time frame for each deliverable and the resources that will be required to complete the project.
-
-- Explain the quality assurance and testing procedures that will be followed.
 ![Timeline](https://user-images.githubusercontent.com/120614501/229098758-412eed0b-661c-4b20-8603-63a36570ac1c.png)
+
+- Project Plan (`Week 1`)
+
+  > A project plan is a comprehensive document that outlines the goals, objectives, and strategies for completing a specific project. It includes a detailed timeline, task list, and resource allocation, as well as risk assessment and mitigation strategies. The project plan serves as a roadmap for the entire team and ensures that everyone is aligned and working towards the same end goal. 
+
+- Data Preparation (`Week 2`)
+
+  > Discussing which data source that suit the best for our project objectives and scope. 
   
+- Data Collection (`Week 3`)
+
+  > Data collection is the process of gathering and measuring information on a specific topic or phenomenon of interest. This involves identifying the data sources, selecting the appropriate data collection methods, and collecting the data itself. 
+  
+- Data Cleaning and Preprocessing (`Week 4`)
+
+  > Data cleaning involves removing any errors, duplicates, or irrelevant information from the dataset. Data integration involves combining data from multiple sources into a single dataset. Data transformation involves converting the data into a format that can be easily analyzed, such as converting categorical data into numerical data. Data reduction involves reducing the size of the dataset by removing any redundant or unnecessary data.
+
+- Data Analysis (`Week 5`)
+
+  > Data analysis is the process of examining and interpreting data to extract useful insights and information. This involves various techniques such as data mining, statistical analysis, machine learning, and visualization.
+
+- Exploration Report (`Week 6`)
+
+  > Make a document that summarizes the findings and insights gained from exploring a particular topic or dataset. The purpose of an exploration report is to provide a comprehensive overview of the data and any patterns or trends that were identified during the exploration process.
+
+- Build User Interface (`Week 7 - Week 8`)
+
+  > Gather user requirements and design the layout and functionality of the UI. This involves creating wireframes or mockups to visualize the final UI design. Then developed using programming languages and frameworks such as HTML, CSS, and JavaScript. The UI should be designed to be responsive and accessible across multiple devices and platforms.
+
+- Build Model (`Week 9`)
+
+  > Developing a mathematical or computational representation of a real-world system or phenomenon. This model can be used to make predictions or understand the behavior of the system in different scenarios.
+
+- System Testing & Report (`Week 10 - Week 11`)
+
+  > Evaluate a software system or application to ensure that it meets the specified requirements and performs as intended. This involves testing the system as a whole, rather than individual components or modules. 
+  
+- System Deployment (`Week 12`)
+
+  > After several testing on our website, it is important to release and install a software application or system into a production environment. This involves preparing the system for use by end-users and ensuring that it is available and accessible.
+
+- Maintenance & Monitoring(`Week 13`)
+
+  >  Performance monitoring and user feedback analysis
 
 ## 🎓 Conclusion
 

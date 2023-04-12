@@ -54,15 +54,99 @@
 
 ## 🔖 Methodology
  The Energy Consumption Analysis Dashboard will be developed using MongoDB to analyze energy consumption patterns and identify opportunities for energy savings.
+ 
+• `Data collection:` To begin the project, all relevant data such as electricity usage and gas usage will be collected from Malaysia Energy Information Hub (MEIH) portal: https://meih.st.gov.my/statistics .
 
- To begin the project, all relevant data such as electricity usage and gas usage will be collected. After the data is collected, the data will undergo pre-processing process before it is analyzed. The tasks in data pre-processing include cleaning, filtering and data transforming to ensure the data is usable. Then, we will start to carry out data analysis to derive insights from the data. In order to achieve this task, we will be using MongoDB's aggregation to determine and analyze the peak demand period and energy consumption patterns by geographic location or demographic group or detecting anomalies in energy consumption. Next, we will identify what features will be used to analyze the energy consumption pattern. Example of the features may be used is time, weather and occupancy. After that, we will predict the energy demand and determine the energy efficiency opportunities by developing predictive models by using machine learning models and algorihtms such as linear regression, time-series forecasting or clustering. Finally, we will visualize the results of the analysis by using chart or graph so that we can understand the energy usage patterns and areas of energy savings easily.
+• `Data preprocessing:` After the data is collected, the data will undergo pre-processing process before it is analyzed. The tasks in data pre-processing include cleaning, filtering and data transforming. This step is to remove unwanted data and handle all the missing values, outliers and inconsistent data that could affect the result and accuracy of data analysis.
+
+• `Data storage:` All data including the preprocssed data and the data model will be store into MongoDB database. The data will also be stored at cloud database which is AWS cloud platform to ensure data security and ease of use.
+
+• `Data analysis and modeling:` Then, we will start to carry out data analysis to derive insights from the data. In order to achieve this task, we will be using MongoDB's aggregation to determine and analyze the peak demand period and energy consumption patterns by geographic location or demographic group or detecting anomalies in energy consumption. 
+
+• `Machine learning and algorithms:` Next, we will identify what features will be used to analyze the energy consumption pattern. Example of the features may be used is time, weather and occupancy. After that, we will predict the energy demand and determine the energy efficiency opportunities by developing predictive models by using machine learning models and algorihtms such as regression and classification. 
+
+• `Visualization and reporting:` Finally, we will visualize the results of the analysis by Power BI so that we can understand the energy usage patterns and areas of energy savings easily. 
 
 ## 🖥️ System Architecture
- It will be possible to view the Energy Consumption Analysis Dashboard from any device via the internet. With customized dashboards that can be adjusted to the particular demands of individual businesses and groups, it will be made to be user-friendly and simple to traverse. With the help of the dashboard, businesses and organizations will be able to spot areas with high energy consumption and waste and take proactive steps to increase energy efficiency. The dashboard will also provide real-time data on energy usage, expenses, and efficiency. Besides, it will send messages and alerts to users when energy use significantly changes so they can react right away.
 
-<div align="center">
-<img src="https://github.com/drshahizan/special-topic-data-engineering/blob/main/project/proposal/StaticIP/dashboard.gif" height="150">
-</div>
+In our proposed system architecture, it contains the following components:
+
+#### Hardware and software requirements:
+<table align=center>
+   <tr>
+    <td>RAM</td>
+    <td>8 GB or more</td>
+   <tr>
+   <tr>
+    <td>Processor</td>
+    <td>Minimum 1GHz; Recommended 2 GHz or more</td>
+   </tr>
+   <tr>
+    <td>Hard Drive</td>
+    <td>20 GB or more free disk space</td>
+   </tr>
+   <tr>
+    <td>System type</td>
+    <td>64-bit operating system</td>
+   </tr>
+   <tr>
+    <td>Operating systems</td>
+    <td>Windows 7 or newer/Mac OS X v10.7 or higher</td>
+   </tr>
+   <tr>
+    <td>Connection</td>
+    <td>Ethernet connection (LAN) or wireless adapter (Wi-Fi)</td>
+   </tr>
+   <tr>
+    <td>Python</td>
+    <td>Version 3.8 or higher</td>
+   </tr>
+   <tr>
+    <td>MongoDB</td>
+    <td>Version 4.4 or higher</td>
+   </tr>
+   <tr>
+    <td>Visual Studio Code</td>
+    <td>1.75 or higher</td>
+   </tr>
+ </table>
+
+To illustrate the system architecture, we have provided a flowchart below:
+<div align="center"><img src="https://github.com/drshahizan/special-topic-data-engineering/blob/main/project/proposal/StaticIP/Screenshot%202023-04-02%20at%2011.31.01%20AM.png"></div>
+
+• `Data source:` Raw data is collected from Malaysia Energy Information Hub (MEIH) portal: https://meih.st.gov.my/statistics .
+
+• `Data preprocessing:` MongoDB Aggregation Framework is used to clean, filter and transform the data. 
+
+• `Data storage:` MongoDB will be used for NoSQL database. All data including the preprocssed data and the data model will be store into MongoDB database. The data will also be stored at cloud database which is AWS cloud platform that could provide data security and it is easy to use.
+
+• `Data modeling:` Python libraries like Pandas and Numpy will be used to analyse the data. Algorithms such as regression and classification will be carried out in this step. This process also involves machine learning to make predictions about the data.
+
+• `Visualization and reporting:` Power BI will be used to visualize the result of the analysis into charts and graphs. Power BI will be connected to MongoDB and the data will be imported into Power BI. It then creates an interactive dashboard for users to get a better insights of the data. After that, the dashboard will be embed to the websites with explanations and descriptions of the data analysis.
+
+#### Overview of the system architecture:
+<table align=center>
+   <tr>
+    <td>Data source</td>
+    <td>Malaysia Energy Information Hub (MEIH) portal: https://meih.st.gov.my/statistics</td>
+   <tr>
+   <tr>
+    <td>Data preprocessing</td>
+    <td>MongoDB Aggregation Framework</td>
+   </tr>
+   <tr>
+    <td>Data storage</td>
+    <td>Mongo DB</td>
+   </tr>
+   <tr>
+    <td>Data analysis and modeling</td>
+    <td>Python libraries</td>
+   </tr>
+   <tr>
+    <td>Visualization and reporting</td>
+    <td>Power BI</td>
+   </tr>
+ </table>
 
 ## 💣 Risks and Limitations
  Although creating the energy consumption analysis dashboard will provide make our life more convienient, it still has its risk and limitations:
@@ -87,131 +171,172 @@
 
 ## 🗿 Deliverables and Milestones
 Key deliverables and milestones:
-1) Data collection and integration
+#### 1) Data collection and integration
 
-   Based on the goals of our dashboard, data from different sources must be collected. For example, data from sensors, energy meters and building management systems.  All of the data will be collected and integrated in the dashboard.
+   Based on the goals of our dashboard, data is collected from the Malaysia Energy Information Hub (MEIH) portal. All of the data will be collected and integrated in the dashboard.
 
-2) Data visualization design
+#### 2) Data analysis
+
+   Data analysis include performing exploratory data analysis which will indicate the characteristic of the data and find out the hidden relationship in the dataset.
+
+#### 3) Data visualization design
 
    Data visualization provides graphs and charts to show the latest information on energy consumption analysis. With graphs and charts, data is easy to interpret and understand.
 
-3) User interface design
+#### 4) User interface design
 
    The design of user interface must be user-friendly. Users can easily navigate and use the dashboard.
 
-4) Security and privacy
+#### 5) Security and privacy
 
    To ensure the data is secure and protected, security and privacy must be implemented into our dashboard system. The privacy of users will not be lost and used by the others.
 
-5) Testing and deployment
+#### 6) Testing and deployment
 
    Testing is required to check if the dashboard can function and interact with users properly. Deployment is needed to improve the performance of the dashboard.
 
-| Week | Deliverables and Milestones | 
-| ----- | ----- |
-| Week 1 - 3 | Data collection and integration | 
-| Week 4 - 6 | Data visualization design | 
-| Week 7 - 10 | User interface design | 
-| Week 10 - 14 | Testing and deployment | 
-
+<table align=center>
+  <tr>
+    <th>Week</th>
+    <th>Deliverables and Milestones</th>
+  </tr>
+  <tr>
+    <td>Week 1 - 3</td>
+    <td>Data collection and integration</td>
+  </tr>
+  <tr>
+    <td>Week 4 - 6</td>
+    <td>Data analysis</td>
+  </tr>
+  <tr>
+    <td>Week 7 - 9</td>
+    <td>Data visualization design</td>
+  </tr>
+    <tr>
+    <td>Week 10 - 12</td>
+    <td>User interface design</td>
+  </tr>
+  <tr>
+    <td>Week 13 - 14</td>
+    <td>Testing and deployment</td>
+  </tr>
+</table>
 
 ## 🗂️ Resources
-The dashboard for energy consumption analysis requires the following tools:
+The dashboard for energy consumption analysis requires the following resources:
 
-- A team of programmers and data scientists 
-- Software for data extraction and machine learning - Web development tools and platforms
-- Energy meters, data collectors, and monitoring devices
-- Cloud saving and storage services
+#### Staff
+- Programmers
+- Data scientists
+- Data administrator
+- Project manager
 
-## 🛠️ Technical Specifications
-
- Data can be collected from different sources such as smart meters, utility bills for energy consumptions analysis. The data schema includes:
-
-- Timestamp
-- Energy consumption
-- Occupancy data
-
-Data Visualization Tools:
- 
-- Tableau
-- Plotly
-- Power BI
-
-Programming Languages, Frameworks and Libraries:
-
-- Python
-- JaveScript
-- SQL
-- Pandas
-- NumPy
-- Plotly
-
-<a href="https://www.python.org/">
-    <img height="50" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg"/>
-</a>
-
-<a href="https://www.javascript.com/">
-    <img height="50" src="https://github.com/yurijserrano/Github-Profile-Readme-Logos/blob/master/programming%20languages/javascript.svg"/>
-</a>
-
-Tools Used:
-- MySQL
-- AWS and Azure Cloud Platforms
-
- Before analysis and dashboard design, data cleaning and pre-processing must be involved to remove noise and outliers. This can increase the accuracy and consistency of result when energy consumption data is being analyzed.
-
- Machine learning algorithm is also included to create build predictive models. Examples of algorithms that can be used are regression models, clustering and neural networks. The choice of algorithm is depended on the type of data and performance metrics for the analysis.
-
- Since the dashboard will be included on the cloud platform, data must be secured and protected from loss, leakage and misuse. Therefore, some steps must be taken to increase data security such as encryption, data backup and recovery, user access control and data segregation.
-
-
-- Provide details about the hardware and software requirements for the proposed system.
-
-Hardware requirements:
-
+#### Equipment
 - Computer
 
-  A desktop or laptop computer with a multi-core processor and a dedicated graphics card is recommended.
+#### Software
+- Visual studio code
+- Power BI
+- MongoDB
 
-- IoT Sensors
+#### Other expenses
+- Software plan subscription
 
-  To collect real-time data to create the energy consumption analysis dashboard.
-
-- Network Connection
-
-  To store and transfer data on the cloud platform
+## 🛠️ Technical Specifications
+<table>
+  <tr>
+    <th>Data sources</th>
+    <td>
+     Use data from Malaysia Energy Information Hub (MEIH) portal: https://meih.st.gov.my/statistics
+   </td>
+  </tr>
+  <tr>
+    <th>Data schema</th>
+    <td>Energy database on crude oil & petroleum, natural gas and electricity</td>
+  </tr>
+  <tr>
+    <th>Data transformations</th>
+    <td>Python libraries:
+      <li>Pandas</li>
+      <li>Numpy</li>
+    </td>
+  </tr>
+  <tr>
+    <th>ML algorithms</th>
+    <td>
+      <li>Regression</li>
+      <li>Classification</li>
+    </td>
+  </tr>
+  <tr>
+    <th>Data visualization tools</th>
+    <td>
+      <li>Power BI</li>
+    </td>
+  </tr>
+  <tr>
+    <th>Programming Languages</th>
+    <td>
+      <li>SQL</li>
+      <li>Python</li>
+    </td>
+  </tr>
+  <tr>
+    <th>Hardware requirements</th>
+    <td>
+      <li>RAM: 8 GB or more</li>
+      <li>Processor: Minimum 1GHz; Recommended 2 GHz or more</li>
+      <li>Hard Drive: 20 GB or more free disk space</li>
+      <li>System type: 64-bit operating system</li>
+      <li>Operating systems: Windows 7 or newer/Mac OS X v10.7 or higher</li>
+      <li>Ethernet connection (LAN) or wireless adapter (Wi-Fi)</li>
+    </td>
+  </tr>
+  <tr>
+    <th>Software requirements</th>
+    <td>
+      <li>Power BI</li>
+      <li>AWS cloud database</li>
+      <li>Visual Studio Code</li>
+      <li>MongoDB</li>
+    </td>
+  </tr>
+  <tr>
+    <th>Data security measures</th>
+    <td>
+      <li>User and device authentication</li>
+     <li>Data access control</li>
+      <li>Encrypt data in AWS cloud database</li>
+      <li>Perform data backup and recovery</li>
+    </td>
+  </tr>
+</table>
  
-Software requirements:
-
-- Database
-
-  To store and manage the energy consumption analysis data
-
-- Programming Language
-
-  Use programming language such as Python, SQL, JavaScript to create dashboard
-
-- Analysis Tools
-
-  To perform analytics on the energy consumption data
-
-  - IoT Platform
-
-  To connect to sensors and transfer data to the dashboard such as AWS IoT and Azure IoT.
-
-
 ## ⏲️ Timeline and Deliverables
+<div align="center">
+T    <img height="330px" src="https://github.com/drshahizan/special-topic-data-engineering/blob/main/project/proposal/StaticIP/Screenshot%202023-04-01%20at%2011.02.10%20AM.png"/>
+</div>
+
 * week1 - week3 : Data collection and integration
     >  This step included searching for data source and data preprocessing. We planned to use 3 weeks on this step as a clean data is the top priority for future use.  
 
-* week4 - week6 : Data visualization design
+* week4 - week6 : Data analysis
+    > In this step, exploratory data analysis (EDA) will be done to analyze and investigate data to understand thee characteristic of the data and the relationship between the data.
+
+* week7 - week9 : Data visualization design
     > Data visualization, which seeks to represent complex data in a simple and straightforward graphic manner, is a crucial part of an Energy Consumption Analysis Dashboard. Using concise and straightforward representations like charts, graphs, and maps, businesses and organizations can quickly identify areas of high energy consumption, track changes in energy usage over time, and make decisions to improve energy efficiency. To create user-friendly images for all users, the process involves transforming numerical data into visual representations, including dynamic components. Companies and organizations can improve energy economy through the use of data visualization, which lowers expenses and encourages a more sustainable future.
 
-* week7 - week10 : User interface design
-    >  The user interface (UI) design is a crucial element of an Energy Consumption Analysis Dashboard. Its goal is to create a user-friendly layout that is easy to browse and access vital data. The UI design process includes several steps, such as comprehending the target audience, designing the interface with their needs and preferences in mind, and considering interactive features, colour schemes, and fonts. A well-designed user interface can enhance user experience, enable more efficient decision-making, and boost energy economy for businesses and groups.
+* week10 - week12 : User interface design
+    > The user interface (UI) design is a crucial element of an Energy Consumption Analysis Dashboard. Its goal is to create a user-friendly layout that is easy to browse and access vital data. The UI design process includes several steps, such as comprehending the target audience, designing the interface with their needs and preferences in mind, and considering interactive features, colour schemes, and fonts. A well-designed user interface can enhance user experience, enable more efficient decision-making, and boost energy economy for businesses and groups.
 
-* week10 - week14 : Testing and deployment
-    >  Testing and dissemination are crucial phases in the development process to guarantee that the Energy Consumption Analysis Dashboard is functional, bug-free, meets the required specifications, and is distributed securely. Making a test plan, conducting test cases, identifying issues and flaws, and fixing them before publication are all part of the testing process. The dashboard is then distributed to the desired platform after testing is complete, keeping security and data safety in mind. The hardware must be built up, and the software must be installed and customised. Ongoing monitoring and maintenance are required to keep the dashboard functioning correctly and satisfying user requirements.
+* week13 - week14 : Testing and deployment
+    > Testing and dissemination are crucial phases in the development process to guarantee that the Energy Consumption Analysis Dashboard is functional, bug-free, meets the required specifications, and is distributed securely. Making a test plan, conducting test cases, identifying issues and flaws, and fixing them before publication are all part of the testing process. The dashboard is then distributed to the desired platform after testing is complete, keeping security and data safety in mind. The hardware must be built up, and the software must be installed and customised. Ongoing monitoring and maintenance are required to keep the dashboard functioning correctly and satisfying user requirements.
 
 ## 🔍 Conclusion
- It is crucial to create an energy usage research panel in order to improve energy efficiency and reduce energy costs for businesses and organizations. Because it gives real-time views into energy use and pollution, it makes it easier to take preventative steps and reduce carbon effect. It is simple to measure and track energy consumption with the interface thanks to its accessibility from any device, which contributes to the development of a more sustainable future.
+ In order to increase the efficiency of marketing strategies, our proposal concludes by outlining the advantages of implementing a data-driven strategy. We can assist in gaining important insights into consumer behavior, preferences, and needs so they can develop individualised marketing campaigns that successfully reach the target audience. We do this by utilising data analytics, machine learning, and AI technologies.
+
+ The benefits of our suggested answer include improved brand awareness, higher ROI, and higher consumer engagement. By staying abreast of the most recent marketing trends and technologies, it also helps the client remain one step ahead of the competition.
+
+ We are however conscious of the potential drawbacks and challenges that may arise when putting this initiative into practice, such as concerns with data privacy, the need for specialised knowledge and resources, and potential resistance to change from some stakeholders.
+
+ There are also risk and disadvantage but the benefits outweigh any potential disadvantages. This will help the us firm establish a data-driven culture, enhance marketing outcomes, and boost overall business success.

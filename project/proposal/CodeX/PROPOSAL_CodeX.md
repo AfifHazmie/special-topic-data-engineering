@@ -23,7 +23,7 @@
 - [12. Conclusion](#12-conclusion)
 
 ## 1. Executive Summary
-Netflix, YouTube, Spotify and many more streaming platforms have been introduced to the world as the technologies are advancing rapidly nowadays. With this being said, users are prone to use it almost everyday whenever they wanted to watch movies or tv shows and stream any music. In this project, our group will focused on the recommendation engine implemented in Netflix. The objective of this project is to create a system that display the best suggestion of tv shows on streaming platform. The system we proposed will implement the usage of MongoDB as a database that can keep track on the user behavioral data which will then be processed using machine learning to recognize streaming patterns of each user so that the most relevant suggestion can be presented to the users to increase the users satisfactory.
+Netflix, YouTube, Spotify and many more streaming platforms have been introduced to the world as the technologies are advancing rapidly nowadays. With this being said, users are prone to use it almost everyday whenever they wanted to watch movies or tv shows and stream any music. In this project, our group will focused on the collaborative filtering recommendation engine, which is implemented by Netflix. The objective of this project is to create a system (dashboard) that display the best suggestion of tv shows on streaming platform. The system we proposed will use a database that can keep track on the user behavioral data which will then be processed using machine learning to recognize streaming patterns of each user so that the most relevant suggestion can be presented to the users to increase the users satisfactory.
 
 
 ## 2. Background
@@ -65,34 +65,9 @@ Below is an overview example of how the system will be programmed:
 </p> 
 
 ## 6. System Architecture
-| Components | Tools and Technologies|
-|--|--|
-|Data Ingestion | Ingest data from Kaggle, including user and item data, ratings, and interactions. The data can be stored in MongoDB|
-|Data Preprocessing | The data will be processed to ensure consistency. The tolls will be used are Pandas, NumPy, and Scikit-learn.|
-|Recommendation Algorithms | The algorithm will generate recommendations based on user preferences and item features.|
-|Model Training | The recommendation algorithm will be trained using historical data to learn the patterns and realationsjip between users and Amazon.|
-|Model Deployment| The deployed model will be able to generate real-time recommendations for users.|
-|Data Visualization and Analytics| By using Matplotlib, Seaborn and Tableau, to visualize and analyze the recommendation data.| 
-
-1) Matplotlib: Matplotlib is a Python library for creating static, animated, and interactive visualizations in Python. It provides a wide range of charts and graphs, including line charts, bar charts, scatter plots, and heat maps.
-
-2) Seaborn: Seaborn is a Python library based on Matplotlib that provides a high-level interface for creating beautiful and informative statistical graphics. It includes various visualization types, such as heat maps, categorical plots, and distribution plots.
-
-3) Plotly: Plotly is an open-source data visualization library that allows users to create interactive plots and charts. It supports a wide range of chart types, including scatter plots, line charts, bar charts, and heat maps.
-
-4) D3.js: D3.js is a JavaScript library for creating dynamic, interactive data visualizations in web browsers. It provides a wide range of chart types and customization options and is widely used for creating complex and interactive visualizations.
-
-5) Tableau: Tableau is a data visualization and business intelligence tool that allows users to create interactive dashboards and reports. It provides a drag-and-drop interface for creating visualizations and supports a wide range of data sources.
-
-6) Power BI: Power BI is a business analytics service by Microsoft that allows users to create interactive dashboards and reports. It provides a range of visualization types, including charts, maps, and tables.
-
-7) MongoDB: MongoDB will store the data in MongoDB collections, if there is a large volumes of data, MongoDB also can handle using sharding. It provides tools and features for managing data, including data modeling, backup and recovery, security, and monitoring. We can also do aggregation, map-reduce, and text search to analyst the data and extract insights from the recommendation data.
-
-Below are the flowchart for the system architecture:
 <p align="center">
-<img height='400px' src='Flowchart.png'/>
-</p>
-
+<img height='500px' src='Recommendation architecture.png'/>
+</p> 
 
 ## 7. Risks and Limitation
 Netflix's show recommendation system has been widely praised for its ability to personalize recommendations to individual users based on their viewing history, ratings, and preferences. However, here are some potential risks and limitations associated with Netflix's recommendation system, along with potential strategies to mitigate them:
@@ -115,7 +90,6 @@ Potential Strategies to Mitigate the Risks & Limitation:
 Overall, while Netflix's recommendation system is generally effective, it is important to recognize its limitations and potential risks, and to be mindful of how the algorithm is shaping our viewing habits and preferences.
 
 ## 8. Deliverables and Milestones
-- Provide a list of the key deliverables and milestones of the proposed data science project, including timelines and deadlines.
 
 <table border="1" align="center">
   <tr>
@@ -123,8 +97,12 @@ Overall, while Netflix's recommendation system is generally effective, it is imp
     <th>Timeframe</th>
   </tr>
   <tr>
+    <td>Project Drafting and Planning</td>
+    <td>Week 1-2</td>
+  </tr>
+  <tr>
     <td>Data Collection and Preprocessing</td>
-    <td>Week 1-4</td>
+    <td>Week 3-4</td>
   </tr>
   <tr>
     <td>Data Modeling</td>
@@ -139,54 +117,15 @@ Overall, while Netflix's recommendation system is generally effective, it is imp
     <td>Week 11</td>
   </tr>
   <tr>
-    <td>Maintenance</td>
-    <td>Week 12-14</td>
+    <td>Maintenance and Monitoring</td>
+    <td>Week 12-13</td>
+  </tr>
+  <tr>
+    <td>Project Final Presentation</td>
+    <td>Week 14</td>
   </tr>
 </table>
 
-
-<table border="1" align="center">
-  <tr>
-    <th>Deliverable</th>
-    <th>Description</th>
-    <th>Milestone</th>
-  </tr>
-  <tr>
-    <td>Data Collection</td>
-    <td>Collection of data from the target source (Netflix)</td>
-    <td>Milestone 1: Data collected from legit source</td>
-  </tr>
-  <tr>
-    <td>Data Cleaning and Preprocessing</td>
-    <td>Perform all the data cleaning and preprocessing steps to the data collected before since the data are raw</td>
-    <td>Milestone 2: Data is cleaned so it can be used for the next milestones</td>
-  </tr>
-  <tr>
-    <td>Exploratory Data Analysis (EDA)</td>
-    <td>A step used to summarize the datasets according to their characteristics as well as identify the relationship, patterns and anamolies</td>
-    <td>Milestone 3: Data is summarized according to its similarities</td>
-  </tr>
-  <tr>
-    <td>Build Model</td>
-    <td>Creation of website structure and functionality using HTML, CSS, and JavaScript</td>
-    <td>Milestone 4: Create a website with dashboard</td>
-  </tr>
-  <tr>
-    <td>Evaluate Model</td>
-    <td>Testing of website usability, functionality, and user experience</td>
-    <td>Milestone 5: User testing completed and feedback incorporated</td>
-  </tr>
-  <tr>
-    <td>Deploy Model</td>
-    <td>Website made live and available to the public</td>
-    <td>Milestone 6: Website launched and operational</td>
-  </tr>
-  <tr>
-    <td>Maintenance</td>
-    <td>Ongoing support and maintenance of website</td>
-    <td>Milestone 7: Post-launch support and maintenance for the users</td>
-  </tr>
-</table>
 
 ## 9. Resources
 1. Staff
@@ -207,63 +146,135 @@ Overall, while Netflix's recommendation system is generally effective, it is imp
 - Software costs
 
 ## 10. Technical Specifications
-Data Sources:
-- Netflix viewing history
-- Netflix search queries
-- User ratings and reviews
-- Netflix content metadata (e.g., movie and TV show titles, actors, directors, genres)
 
-Data Schema:
-- User data: User ID, viewing history, search queries, ratings, reviews, demographics (age, gender, location, etc.)
-- Item data: Movie and TV show ID, title, cast, crew, genre, release date, rating, reviews, duration, country, language
-- Interaction data: User ID, item ID, interaction type (e.g., watched, searched, rated), timestamp
-
-Data Transformations:
-- Data cleaning: Remove duplicates, handle missing values, standardize data formats, etc.
-- Feature engineering: Create new features from existing data, such as average rating per genre, popularity score, etc.
-- Data normalization and scaling: Normalize and scale numerical features to ensure they have similar ranges.
-- Text preprocessing: Tokenization, stemming/lemmatization, stop word removal, and other techniques to process text data.
-- Dimensionality reduction: Reduce the dimensionality of the data using techniques like PCA or t-SNE to improve model performance.
-
-Machine Learning Algorithms:
-- Collaborative filtering: Recommends items to users based on their past behavior and preferences.
-- Content-based filtering: Recommends items to users based on the similarity of their attributes to items they have liked before.
-- Hybrid approaches: Combines collaborative and content-based filtering techniques to improve recommendations.
-- Matrix factorization: Factorizes the user-item interaction matrix into low-rank matrices to capture latent features.
-
-Data Visualization Tools:
-- Tableau, PowerBI, Altryx and other business intelligence tools can be used to create visualizations of the recommendation system's performance.
-- Python visualization libraries like Matplotlib, Seaborn, and Plotly can be used to create interactive visualizations of the data and model results.
-
-Hardware Requirements:
-- Processing power: The system will require a powerful CPU for training machine learning models and processing large datasets. A multi-core processor is recommended for better performance.
-- Memory (RAM): The system will require a large amount of RAM for handling big data sets and training complex machine learning models. At least 16GB of RAM is recommended for a small-scale system, but larger systems will require more memory.
-- Storage: The system will require a large amount of storage to store the Netflix viewing history, search queries, user ratings and reviews, content metadata, and machine learning models. A high-performance storage system, such as a solid-state drive (SSD), is recommended for better performance.
-
-Software Requirements:
-- Operating System: The recommended operating system for the system is Windows, Linux or MacOS, as they are both reliable and support many of the required software tools.
-- Programming Language: The system will use Python as the primary programming language for building machine learning models and data processing pipelines.
-- Frameworks and Libraries: The system will use a variety of machine learning frameworks and libraries such as Apache Spark, TensorFlow, PyTorch, Scikit-learn, Keras, Pandas, and NumPy. These libraries can be installed using the pip package manager in Python.
-- Database: The system will use a distributed NoSQL database such as Apache Cassandra to store and manage large-scale data sets.
-- Web Framework: The system may use a lightweight web framework such as Flask to provide a user interface for the recommendation system. 
-
-**Data Security**
-- Encryption: Encryption is the process of encoding information in such a way that only authorized parties can access it. All sensitive data, including user data, machine learning models, and system logs, should be encrypted during storage and transmission. Encryption can be implemented using industry-standard protocols such as AES, SSL, and TLS.
-
-- Access control: Access control is the process of **granting or denying access to resources based on the user's identity, role, and permissions**. Access to sensitive data should be restricted to only authorized personnel who require access to perform their duties. Access control policies can be implemented using techniques such as role-based access control (RBAC) and attribute-based access control (ABAC).
-
-- Authentication and Authorization: Authentication is the process of verifying the identity of a user, while authorization is the process of granting or denying access to resources based on the user's identity and permissions. All users, including system administrators, should be required to authenticate before accessing the system. Authentication can be implemented using techniques such as **password authentication, two-factor authentication (2FA), or biometric authentication.** Authorization can be implemented using access control policies.
-
-- Data Backup and Recovery: Regular backups of sensitive data should be taken to ensure that data can be recovered in case of any data loss, corruption or disaster. Backup and recovery policies should be put in place, and backup data should be stored in a secure and encrypted location.
-
-- Regular security audits: Regular security audits should be performed to identify vulnerabilities, address security concerns, and ensure that security policies and procedures are being followed. Security audits can be performed internally or by third-party security firms.
+<table>
+  <tr>
+    <th align= "left">Data sources</th>
+    <td>
+		<ul>
+	        <li>Netflix viewing history</li>
+	        <li>Netflix search queries</li>
+	        <li>User ratings and reviews</li>
+	        <li>Netflix content metadata (e.g., movie and TV show titles, actors, directors, genres)</li>
+        </ul>    
+   </td>
+  </tr>
+  <tr>
+    <th align= "left">Data schema</th>
+    <td>
+	    <ul>
+		    <li>Item data: Movie and TV show ID, title, cast, crew, genre, release date, rating, reviews, duration, country, language</li>
+		    <li>Interaction data: User ID, item ID, interaction type (e.g., watched, searched, rated), timestamp</li>
+	   </ul>
+   </td>
+  </tr>
+  <tr>
+    <th align= "left">Data transformations</th>
+    <td>
+      <ul>
+        <li>Data cleaning: Remove duplicates, handle missing values, standardize data formats</li>
+        <li>Data extraction</li>
+        <li>Data normalisation: Normalize and scale numerical features to ensure they have similar ranges</li>
+        <li>Text processing: Tokenization, stemming/lemmatization, stop word removal</li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <th align= "left">Machine learning algorithms</th>
+    <td>
+      <ul>
+	<li>Collaborative filtering</li>
+	<li>Content-based filtering</li>
+	<li>Deep learning: CNNs, RNNs</li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <th align= "left">Data visualization tools</th>
+    <td>
+      <ul>
+        <li>Tableau</li>
+        <li>PowerBI</li>
+        <li>Plotly</li>
+        <li>D3.js</li>
+        <li>Matplotlib</li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <th align= "left">Hardware Requirements</th>
+    <td>
+	   <ul>
+			<li>Processing power: multicore processor</li>
+		    <li>Memory (RAM): >16GB of RAM</li>
+		    <li>Storage: SSD</li>
+	    </ul>
+    </td>
+  </tr>
+  <tr>
+    <th align= "left">Software Requirements</th>
+    <td>
+	    <ul>
+			<li>Operating system: Windows, Linux or MacOS</li>
+		    <li>Programming language: Python</li>
+		    <li>Frameworks and Libraries: PyTorch, Scikit-learn, Keras, Pandas, and NumPy </li>
+		    <li>Database: MongoDB</li>
+		    <li>Web Framework: FlaskAPI/rapidAPI</li>
+		</ul>
+	</td>
+  </tr>
+    <tr>
+    <th align= "left">Data Security</th>
+    <td>
+	    <ul>
+			<li>Encryption: AES/SSL/TLS</li>
+		    <li>Access control: RBAC/ABAC</li>
+		    <li>Authentication and Authorisation:  password authentication, 2FA, biometric authentication</li>
+		    <li>Data backup and recovery: regular backups of sensitive data, data should be stored in a secure and encrypted location.</li>
+		    <li>Regular security audits: to identify vulnerabilities, address security concerns, and ensure that security policies and procedures are being followed.</li>
+		</ul>
+	</td>
+  </tr>
+</table>
 
 ## 11. Timeline and Deliverables
 
 Timeline
 
-- WEEK 1 - 4 : `Data Collection and Processing`
+  ```mermaid
+gantt
+    title Netflix Recommendation System
+    dateFormat  YYYY-MM-DD
+    axisFormat %W
+  
+    section Data Collection and Preprocessing
+    Data Searching   :active, 2023-04-01 , 7d
+    Data Cleaning    :2023-04-08 , 7d
+    EDA              :2023-04-15 , 14d
+    
+  
+    section Data Modeling
+    Data analyzing           :2023-04-29 , 7d
+    Preparing data model     :2023-05-06 , 7d
+  
+    section User Interface Design
+    Identify system needs     :2023-05-13 , 3d
+    Develop user interface    :2023-05-16 , 18d
+  
+    section Deployment & Testing
+    System testing    :2023-06-03 , 13d
+    Refine design     :2023-06-03 , 13d
+    System launching  :2023-06-16 , 1d
+    
+    section Maintenance
+    System monitoring & optimization    :2023-06-17 , 14d
+  
+  ```
 
+
+- WEEK 1 - 4 : `Project Drafting, Data Collection and Processing`
+	
+  > Design the project planning which includes objectives, methodology and deliverables.
   > Collect user and item data and store it in a MongoDB database.
   > Preprocess the data to remove any inconsistencies or anomalies.
 - WEEK 5 - 6 : `Data Modeling`
@@ -272,11 +283,11 @@ Timeline
 - WEEK 7 - 10 : `User Interface`
 
   > Build a user interface that enables users to interact with the recommendation engine and view the recommendations.
-- WEEK 11 : `Deployment and Testing`
+- WEEK 11 - 12 : `Deployment and Testing`
 
   > Deploy the recommendation engine and database on a cloud platform such as AWS or Heroku.
   > Test the recommendation engine to ensure that it is functioning correctly and providing accurate recommendations.
-- WEEK 12 - 14 : `Maintenance`
+- WEEK 13 - 14 : `Maintenance`
 
   > Maintain and update the recommendation engine as needed to ensure that it continues to meet the requirements of the project.
 

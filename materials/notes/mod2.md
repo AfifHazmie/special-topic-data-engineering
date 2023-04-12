@@ -7,36 +7,80 @@
 
 Don't forget to hit the :star: if you like this repo.
 
-<!---
-Module X: XXX
+# Module 2: Data Integration
 
-Group XXXX
-1. XXXX
-2. XXXX
-3. XXXX
-4. XXXX
+<h2 align="center">
+  Group Name
+  <br>
+</h2>
 
--->
+<p align="center">
+  <a>DataSphere</a><br>
+</p>
 
-# Module X: Data Engineer, Data Engineering, Data Science, Data Scientist
+<h2 align="center">
+  Group Members
+  <br>
+</h2>
+<p align="center">
+<table align="center">
+  <tr>
+    <th>Name</th>
+    <th>Matric No</th>
+  </tr>
+  <tr>
+    <th>TERENCE A/L LOORTHANATHAN   </th>
+    <th>A20EC0165</th>
+  </tr>
+    <tr>
+    <th>RISHMA FATHIMA BINTI BASHER </th>
+    <th>A20EC0137</th>
+  </tr>
+    <tr>
+    <th>NUR SYAMALIA FAIQAH BINTI MOHD KAMAL</th>
+    <th>A20EC0118</th>
+  </tr>
+    <tr>
+    <th>QAISARA BINTI ROHZAN</th>
+    <th>A20EC0133</th>
+  </tr>
+    <tr>
+    <th>NURFARRAHIN BINTI CHE ALIAS </th>
+    <th>A20EC0121</th>
+  </tr>
+  </table>
+</p>
+
 
 ### Contents:
-#### Notes
-- [Abc](#abc)
+* [Introduction](#-introduction)
+* [Data Integration Architecture](#️-data-integration-architecture)
+* [Data Integration Workflow](#-data-integration-workflow)
+* [Data Integration Workflow Integration Breakpoints](#-data-integration-workflow-integration-breakpoints)
+* [Data Integration Workflow Stages](#️-data-integration-workflow-stages)
+* [Data Integration Requirements](#-data-integration-requirements)
+* [Data Integration Design](#-data-integration-design)
+* [Data Integration Tools and Types](#-data-integration-tools-and-types)
 
-### Others
-- [xyz](https://utm.my)
 
-
-## ABC
+## Introduction
 Software engineering is an essential field of study that deals with the design, development, and maintenance of software applications. It plays a vital role in the development and success of modern technology. Here are some of the reasons why software engineering is important:
 
 
-## Contribution 🛠️
-Please create an [Issue](https://github.com/drshahizan/special-topic-data-engineering/issues) for any improvements, suggestions or errors in the content.
+## Data Integration Architecture
 
-You can also contact me using [Linkedin](https://www.linkedin.com/in/drshahizan/) for any other queries or feedback.
+## Data Integration Workflow
 
-![](https://visitor-badge.glitch.me/badge?page_id=drshahizan)
+## Data Integration Workflow Integration Breakpoints
+
+## Data Integration Workflow Stages
+
+## Data Integration Requirements
+
+## Data Integration Design
+
+## Data Integration Tools and Types
+
+
 
 

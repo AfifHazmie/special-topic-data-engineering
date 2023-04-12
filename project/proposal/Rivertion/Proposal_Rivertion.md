@@ -1,4 +1,4 @@
-<h1 align='center'><b>Analyzing Medical Images for Disease Diagnosis in Malaysia 👨‍⚕️</b></h1> 
+<h1 align='center'><b>Image Analysis for Rotten Fruit Detection 🍇🍉🍎🍐🍓</b></h1> 
 
 ## Table of Contents
 * [📜 Executive Summary](#-executive-summary)
@@ -16,194 +16,127 @@
 
 ## 📜 Executive Summary
 
-This project aims to develop a computer-aided diagnostic (CAD) system for analyzing medical images to improve disease diagnosis in Malaysia. The objectives of the project are to train machine learning models on a dataset of medical images, evaluate the performance of the models using various metrics, and integrate the models into a CAD system that can assist medical professionals in making more accurate diagnoses.
+Rotten fruits can cause significant problems for the fruit industry, leading to economic losses, food waste, and even potential health risks for consumers. Manual inspection for detecting rotten fruits can be time-consuming and often unreliable, making it difficult to ensure consistent fruit quality. However, recent advancements in machine learning algorithms and computer vision have opened up new opportunities for improving the accuracy and efficiency of image analysis for fruit quality control.
 
-The expected outcomes of the project include a dataset of annotated medical images, trained machine learning models that can accurately diagnose diseases, and a CAD system that can be used in clinical practice to aid medical professionals. The project has the potential to improve the accuracy and speed of disease diagnosis, ultimately leading to better patient outcomes in Malaysia.
+This project aims to develop an image analysis system for detecting rotten fruits that utilizes state-of-the-art machine learning techniques. The system will analyze images of fruits and identify which ones are in a state of decay, enabling more efficient and accurate fruit quality control. This will have significant benefits for the fruit industry, as it will allow for improved quality control and reduced waste.
 
+To achieve this goal, the project will collect a diverse dataset of fruit images, including both healthy and rotten fruits. The dataset will be preprocessed to enhance image quality and extract features relevant to fruit quality. The team will then train and evaluate a deep learning model, such as a convolutional neural network, to accurately classify fruits as healthy or rotten.
+
+The system will have a user-friendly interface, allowing for easy input of fruit images and displaying the results of the analysis. The performance of the system will be validated using a separate test dataset, and its accuracy will be compared to existing methods for fruit quality control.
+
+In summary, this project aims to develop an accurate and reliable system for detecting rotten fruits using image analysis, which will have significant benefits for the fruit industry. By utilizing machine learning algorithms, the system will enable more efficient and consistent fruit quality control, reducing waste and improving the safety of food products.
 
 
 ## 📝 Background:
 <p align="center">
-<img src="https://www.postdicom.com/images/blog-posts/social-media-images/medical-imaging-science-and-applications-social.jpg" alt="Health" height="250"></img>
+<img src="https://icanandiam.com/wp-content/uploads/2022/03/72596-rotten-fruit-oranges-getty-delfinkina-1200.1200w.tn_.jpg" alt="Playground" height="250"></img>
 </p>
 
-Medical imaging plays a crucial role in modern healthcare for the diagnosis and treatment of various diseases. In Malaysia, the demand for medical imaging services has been growing due to an aging population and increasing incidence of chronic diseases. However, the shortage of qualified radiologists, coupled with the increasing complexity of medical images, has led to delays in diagnosis, misdiagnosis, and suboptimal treatment outcomes.
+Rotten fruits are a significant problem in the fruit industry, leading to economic losses, food waste, and even potential health risks for consumers. The detection of rotten fruits is a crucial step in the fruit production chain to ensure that only high-quality fruits reach the market. Manual inspection by human operators is the most common method used for detecting rotten fruits, but it can be time-consuming, labor-intensive, and subject to human error. Automated systems for detecting rotten fruits using image analysis have been proposed as a more efficient and reliable alternative to manual inspection.
 
-Interpreting medical images is a challenging task that requires expert knowledge and experience. Radiologists are trained to identify subtle differences in images that may indicate a disease or condition, but this process can be time-consuming and subject to human error. Additionally, the growing volume of medical images being generated presents a significant challenge to radiologists, as it increases their workload and reduces the amount of time they can spend on each case.
+Early attempts at automated fruit quality inspection relied on simple image processing techniques such as color and texture analysis. These techniques could only achieve limited accuracy and were sensitive to lighting conditions and camera angles. In recent years, advances in machine learning algorithms and computer vision have enabled more sophisticated approaches for fruit quality inspection. Convolutional neural networks (CNNs) have been shown to be highly effective for image classification tasks, including fruit quality inspection.
 
-The proposed data science project aims to address these challenges by developing a computer-aided diagnostic (CAD) system that can assist radiologists in analyzing medical images. By leveraging machine learning algorithms trained on a large dataset of annotated medical images, the system can identify patterns and anomalies in images that may be indicative of a disease or condition. The system can then provide radiologists with a preliminary diagnosis or highlight areas of concern, reducing the time and effort required to analyze images and improving the accuracy of diagnosis.
+Several studies have investigated the use of CNNs for detecting rotten fruits. For example, one study used a deep learning approach to classify apples as healthy or rotten based on images taken from different viewpoints. Another study proposed a method for detecting rot in apples using a combination of texture and color features.
 
-The potential benefits of the proposed CAD system are significant. By improving the speed and accuracy of diagnosis, the system can reduce the time required for patients to receive treatment, which can be critical in cases where time is of the essence. Additionally, the system can help reduce the workload of radiologists and improve their efficiency, allowing them to spend more time on complex cases that require their expertise. Finally, the system can also help address the shortage of qualified radiologists by enabling healthcare providers to diagnose and treat more patients with existing resources. Overall, the proposed CAD system has the potential to significantly improve healthcare outcomes in Malaysia and enhance the quality of medical imaging services.
+Despite the progress made in automated fruit quality inspection, several challenges still need to be addressed. One major  challenge is the integration of image analysis systems into the fruit production chain, ensuring that the system is scalable, user-friendly, and cost-effective.
+
+In summary, automated systems for detecting rotten fruits using image analysis have the potential to improve the efficiency and accuracy of fruit quality control. Recent advancements in machine learning algorithms and computer vision have enabled more sophisticated approaches for fruit quality inspection. However, several challenges still need to be addressed, including the development of a diverse image dataset and the integration of image analysis systems into the fruit production chain.
 
 
 ## 🎯 Goals and Objectives:
 
 Goals:
-The main goal of the proposed project is to develop a computer-aided diagnostic (CAD) system for medical imaging analysis that can improve disease diagnosis in Malaysia. The CAD system will leverage machine learning models trained on a dataset of medical images to assist radiologists in making more accurate diagnoses, reducing the time and effort required to analyze images, and improving the efficiency of diagnosis. The ultimate goal is to improve patient outcomes and enhance the quality of medical imaging services in Malaysia.
+The primary goal of this project is to develop an accurate and reliable system for detecting rotten fruits using image analysis. The specific objectives include:
 
-Objectives:
-1. Collect and annotate a dataset of medical images that covers a range of diseases and conditions relevant to Malaysia.
-2. Train machine learning models on the dataset to accurately diagnose diseases and conditions in medical images.
-3. Evaluate the performance of the machine learning models using various metrics, such as sensitivity, specificity, and accuracy.
-4. Integrate the trained machine learning models into a CAD system that can assist radiologists in analyzing medical images.
-5. Test the CAD system on a sample of medical images to ensure its accuracy and efficiency in diagnosing diseases and conditions.
-6. Deploy the CAD system in clinical practice and monitor its performance in assisting radiologists in making diagnoses.
-7. Evaluate the impact of the CAD system on diagnosis accuracy, diagnosis speed, radiologist workload, and patient outcomes.
-8. Refine the CAD system based on feedback from medical professionals and patients to improve its performance and usability.
+1. Collecting a diverse dataset of fruit images, including both healthy and rotten fruits.
+2. Preprocessing the image dataset to enhance image quality and extract features relevant to fruit quality.
+3. Training and evaluating a deep learning model, such as a convolutional neural network, to accurately classify fruits as healthy or rotten.
+4. Developing a user-friendly interface for the system, allowing for easy input of fruit images and displaying the results of the analysis.
+5. Validating the performance of the system using a separate test dataset and comparing its accuracy to existing methods for fruit quality control.
+
+By achieving these objectives, this project will provide a valuable tool for the fruit industry, allowing for improved quality control and reduced waste.
 
 
 ## 🔍 Scope: 
+<p align="center">
+<img src="https://github.com/drshahizan/special-topic-data-engineering/blob/39749ec2da99317d7cc519446651431dc14ac85d/project/proposal/Rivertion/image/ss.png" alt="Scope" height="400"></img>
+</p>
 
-<ul>
-  <li>The scope of this project is to develop an AI system for the analysis of chest X-ray images of pediatric patients.</li>
-  <li>The dataset comprises 5,863 high-quality X-Ray images (JPEG) of anterior-posterior view, with 2 categories - Pneumonia and Normal, which are organized into 3 folders (train, test, val) and contain subfolders for each image category (Pneumonia/Normal). The dataset was sourced from Kaggle, with the URL: https://www.kaggle.com/datasets/paultimothymooney/chest-xray-pneumonia.</li>
-  <li>The main tool to be employed in this project is 3D Slicer. In addition, various tools and technologies such as machine learning algorithms, deep learning frameworks, image processing libraries, and cloud-based computing resources will be used to develop the AI system.</li>
-  <li>The chest X-ray images were selected from retrospective cohorts of pediatric patients of one to five years old from Guangzhou Women and Children’s Medical Center, Guangzhou. The images were initially screened for quality control, and all low-quality or unreadable scans were removed from the dataset. The diagnoses for the images were then graded by two expert physicians, with the evaluation set checked by a third expert to account for any grading errors.</li>
-  <li>The successful completion of the project will enable accurate and efficient diagnosis of chest X-ray images in pediatric patients, contributing to improved clinical outcomes and patient care.</li>
-</ul>
+The scope of this project is to develop an image analysis system for detecting rotten fruits using machine learning algorithms. The system will analyze images of fruits and accurately identify which ones are in a state of decay. The project will involve the following activities:
+
+Collecting a diverse dataset of fruit images, including both healthy and rotten fruits, with a range of lighting conditions and camera angles.
+Preprocessing the image dataset to enhance image quality and extract features relevant to fruit quality.
+Designing and implementing a deep learning model, such as a convolutional neural network, to accurately classify fruits as healthy or rotten.
+Developing a user-friendly interface for the system, allowing for easy input of fruit images and displaying the results of the analysis.
+Validating the performance of the system using a separate test dataset and comparing its accuracy to existing methods for fruit quality control.
+The project will focus on the detection of rotten fruits in images, and will not include physical inspection of fruits or other aspects of fruit quality control. The project will use existing tools and libraries for machine learning and image analysis, rather than developing new algorithms from scratch. The project will be limited to the detection of rotten fruits in a controlled laboratory environment, and the system's performance may vary in real-world settings.
+
+The project team will consist of machine learning experts, computer vision specialists, and domain experts in the fruit industry. The project will be conducted over a period of six months and will be evaluated based on the accuracy and efficiency of the developed system. The project's deliverables will include a report detailing the methodology, results, and conclusions of the project, as well as a functional prototype of the image analysis system.
 
 
 ## 📄 Methodology:
 
-The proposed data science project for developing a computer-aided diagnostic (CAD) system for analyzing medical images will be executed using the following methodology:
+The proposed data science project for developing a Image Analysis System for Fruit Rotten Detection will be executed using the following methodology:
 
-<ol>
-	<li>Data Collection</li>
+1. ``Data Collection``
   	<ul>
- 		<li>Medical images such as X-rays will be collected from various websites. The images will be anonymized and stored in 		a secure database.</li>
+ 		<li>The project will use the Google API to scrape fruit images from the internet. Specifically, the project will utilize Google's Custom Search JSON API to search for fruit images and download them in bulk. The API will be configured to search for a variety of fruits and retrieve both healthy and rotten images. Each image will be labeled as healthy or rotten for training the model.</li>
   	</ul>
-	<li>Data Cleaning and Preprocessing</li>
+2. ``Data Cleaning and Preprocessing``
   	<ul>
-  		<li>The collected images will be preprocessed to remove any noise or artifacts, and to standardize the image size and resolution. Image processing 		   techniques such as filtering and normalization will be applied to improve the image quality.</li>
+  		<li>The collected dataset will be preprocessed to enhance image quality and extract features relevant to fruit quality. Preprocessing steps may include resizing, cropping, normalization, and color correction to ensure consistency across all images. The images will also be converted to grayscale and segmented to extract fruit regions from the background. Feature extraction techniques such as Histogram of Oriented Gradients (HOG) and Local Binary Patterns (LBP) will be applied to extract relevant features from the segmented fruit regions.</li>
   	</ul>
-	<li>Feature Extraction</li>
+3. ``Model Selection and Training``
   	<ul>
-  		<li>Image segmentation techniques will be used to identify and extract relevant features from the medical images. These features will be used as inputs 		to the machine learning models.</li>
+  		<li>A deep learning model, such as a Convolutional Neural Network (CNN), will be trained on the preprocessed dataset to accurately classify fruits as healthy or rotten. The model will be optimized by adjusting hyperparameters, such as learning rate, batch size, and number of epochs. A separate validation dataset will be used to evaluate the model's performance and make any necessary adjustments.</li>
   	</ul>
-	<li>Machine Learning Algorithms</li>
+4. ``Model Evaluation and Comparison``
   	<ul>
-  		<li>Several machine learning algorithms such as support vector machines (SVM), random forest, and convolutional neural networks (CNN) will be trained 		      on the annotated medical images to classify and diagnose various diseases.</li>
+  		<li>The accuracy of the developed system will be evaluated using a separate test dataset that was not used during the training or validation process. The performance of the system will be compared to existing methods for fruit quality control, such as manual inspection and traditional image processing techniques.</li>
   	</ul>
-	<li>Data Visualization</li>
+5. ``Data Visualization``
   	<ul>
-  		<li>The results generated by the machine learning models will be visualized using data visualization tools such as matplotlib and seaborn. The 			visualizations will be used to communicate the findings to healthcare professionals.</li>
+  		<li>The results of the analysis will be displayed in a user-friendly interface, allowing for easy input of fruit images and displaying the results of the analysis. The system may also generate visualizations, such as heatmaps or bar charts, to provide insights into the performance of the model.</li>
   	</ul>
-</ol>
-
-The software and hardware resources required for the project include:
-
-1. Python programming language for developing machine learning models and data visualization tools.
-2. Deep learning libraries such as Flask and TensorFlow for developing CNN models.
-3. Scikit-learn library for developing SVM and random forest models.
-4. MongoDB database for storing and processing the large volumes of medical image data.
-5. High-performance computing resources such as GPUs and multi-core processors for training the machine learning models.
-
 
 
 ## ⚙️ System Architecture:
 
-The CAD system architecture will consist of various components, including data collection, pre-processing, data analysis, feature extraction, machine learning, CAD system integration, and others. MongoDB will be used to store and manage the pre-processed medical image data, and TensorFlow will be used to build and train the machine learning models. The CAD system will be developed using Flask, a Python-based web framework, and will include interactive and static data visualization tools such as Plotly and Matplotlib.
+The system architecture for rotten fruit detection using image analysis includes several components that work together to perform the task of detecting rotten fruits in images. The proposed system architecture is as follows:
+
+<img src="https://github.com/drshahizan/special-topic-data-engineering/blob/028ad0e6b1ad457de7de210b7da3759020e2e23f/project/proposal/Rivertion/image/system_architecture.jpg" alt="SystemArchitecture"></img>
 
 
 | No. | Components | Description |
 | ------------- | ------------- | ------------- |
-| 1. | Data Collection | Collect medical images from various sources such as hospitals and medical research institutions. |
-| 2. | Pre-processing | Remove noise, artifacts, and irrelevant information from the images. Resize, normalize, and standardize the images to ensure consistency across the dataset. Label the images to indicate the presence or absence of specific medical conditions. |
-| 3. | Data Analysis | Conduct exploratory data analysis (EDA) techniques such as data visualization to gain insights into the data and identify potential outliers or anomalies. |
-| 4. | Feature Extraction | Extract meaningful features from the pre-processed images using techniques such as convolutional neural networks (CNNs). |
-| 5. | Machine Learning | Train a machine learning model such as a support vector machine (SVM) or random forest using the extracted features to predict the presence or absence of specific medical conditions. |
-| 6. | Model Evaluation | Evaluate the performance of the machine learning model using various metrics such as accuracy, precision, and recall. |
-| 7. | Model Optimization | Optimize the machine learning model using hyperparameter tuning and cross-validation techniques. |
-| 8. | CAD System Integration | Integrate the trained and optimized machine learning model into a CAD system that can assist medical professionals in making more accurate diagnoses. |
-| 9. | User Interface | Develop a user-friendly interface for the CAD system that includes various data visualization techniques such as interactive and static plots, data tables, and heatmaps. |
-| 10. | Deployment | Deploy the CAD system on a server with appropriate hardware and software resources such as a GPU with at least 8 GB of VRAM, a Linux operating system with Python, TensorFlow, Flask, and MongoDB installed, and data visualization and analysis tools such as Plotly and Matplotlib. |
-| 11. | Maintenance | Regularly monitor and upgrade the hardware and software resources as necessary to ensure optimal performance of the CAD system. |
+| 1. | Image Acquisition | The first step in the process is to acquire the images of the fruits. This can be done using web scraping or API. These images will be processed and analyzed to detect the presence of any rotten fruit. |
+| 2. | Pre-processing | The acquired images will be pre-processed to remove any noise or artifacts that may interfere with the image analysis process. This may include resizing, cropping, and normalization. |
+| 3. | Image Analysis | The pre-processed images will be analyzed to detect the presence of any rotten fruit using image analysis techniques. This may include feature extraction. |
+| 4. | Storage and Management | The analyzed images and their corresponding results will be stored in a MongoDB database. MongoDB is a NoSQL database that is highly scalable and flexible, making it a suitable choice for storing large volumes of image data. |
+| 5. | Machine Learning | A deep learning model, such as a convolutional neural network, will be trained on the preprocessed image dataset using TensorFlow or Keras. |
+| 6. | Data Visualization | Data analysis and visualization tools such as Python and R will be used to analyze the data stored in the MongoDB database. This will enable the identification of trends and patterns in the data that can be used to improve the accuracy of the system. |
 
-___
-
-<ol>
-	<li>Data Storage and Management:</li>
-<br>
-<p>MongoDB is a NoSQL document-oriented database that is highly suitable for handling large and complex datasets such as medical images. MongoDB stores data in collections of documents, which are JSON-like structures that allow for flexible and efficient data storage and retrieval. In the proposed system architecture, MongoDB will be used to store and manage pre-processed medical image data.</p>
-
-<p>The medical images will be pre-processed to extract features relevant to disease diagnosis, and the resulting features will be stored as documents in MongoDB collections. Each document will represent a single medical image and will include the extracted features, metadata such as patient ID, and other relevant information.</p>
-
-MongoDB provides several features that are beneficial for managing and analyzing large datasets, including:
-	<ul>
-<li>Scalability: MongoDB is highly scalable and can handle large volumes of data, making it suitable for storing medical image data.</li>
-
-<li>Indexing: MongoDB supports indexing, which allows for fast retrieval of data based on specific criteria. This feature is essential for efficient querying of medical image data.</li>
-
-<li>Aggregation: MongoDB supports powerful aggregation capabilities, which enable complex data analysis and processing.</li>
-	</ul>
-<br>
-<li>Data Analysis:</li>
-<br>
-<p>MongoDB provides several features that facilitate data analysis, including indexing, aggregation, and real-time querying capabilities. The data analysis will be performed using Python-based data analysis libraries such as NumPy, Pandas, and Scikit-learn, which provide a wide range of data analysis tools, including data cleaning, preprocessing, feature selection, and feature extraction. These libraries will be used to manipulate and analyze the data stored in MongoDB, enabling the extraction of meaningful insights and patterns from the data. Data visualization tools such as Matplotlib and Plotly will be used to visualize the results of the data analysis.</p>
-<br>
-<li>Hardware and Software Requirements:</li>
-<br>
-<p>To support the use of MongoDB in the proposed system architecture, the following hardware and software requirements will be needed:</p>
-	<ul>
-<li>A dedicated server: MongoDB requires a dedicated server with sufficient storage capacity and processing power to handle large volumes of medical image data. The server should have at least 16 GB of RAM, a multi-core CPU, and sufficient disk space to store the data.</li>
-
-<li>MongoDB database: The MongoDB database will need to be installed and configured on the dedicated server. MongoDB can be installed on Windows, macOS, and Linux operating systems.</li>
-
-<li>Python: The system will require a Python installation with the appropriate libraries and packages for interacting with the MongoDB database. The recommended package for this is PyMongo, which provides a Python API for interacting with MongoDB.</li>
-
-<li>Data pre-processing software: Before storing the medical images in MongoDB, they will need to be pre-processed to extract relevant features. This will require the use of software tools such as OpenCV or TensorFlow, depending on the specific feature extraction technique being used.</li>
-	</ul>
-</ol>
-
-___
-
-The proposed system architecture will employ various tools and frameworks for data visualization and analysis, including:
- | Tools/Frameworks | Description |
- | ------------- | ------------- |
-| Matplotlib | Matplotlib is a popular data visualization library for Python. It provides a wide range of functions for creating visualizations such as line charts, bar charts, scatterplots, and histograms. Matplotlib can also be used to create customized visualizations to meet specific requirements. |
-| Plotly | Plotly is a web-based data visualization framework that allows for the creation of interactive visualizations. It provides a wide range of chart types, including 3D charts, scatterplots, and heatmaps. Plotly is highly customizable and supports the creation of customized dashboards for data exploration and analysis. |
-| Seaborn | Seaborn is a data visualization library that is built on top of Matplotlib. It provides a high-level interface for creating statistical graphics such as heatmaps, regression plots, and distribution plots. Seaborn is highly customizable and supports the creation of complex visualizations with minimal coding. |
-| Tableau | Tableau is a data visualization and business intelligence tool that allows for the creation of interactive dashboards and reports. Tableau provides a wide range of chart types, including bar charts, line charts, and scatterplots. It also supports the integration of multiple data sources, allowing for the creation of comprehensive dashboards for data analysis. |
-| Scikit-learn | Scikit-learn is a popular machine learning library for Python. It provides a wide range of machine learning algorithms for tasks such as classification, regression, clustering, and dimensionality reduction. Scikit-learn also provides tools for data preprocessing, feature selection, and model evaluation. |
-| Pandas | Pandas is a Python library for data manipulation and analysis. It provides data structures for efficiently handling and manipulating large datasets, including time series data. Pandas also supports data visualization using Matplotlib. |
-| NumPy | NumPy is a Python library for scientific computing. It provides support for large, multi-dimensional arrays and matrices, along with a wide range of mathematical functions. NumPy is often used in conjunction with other data analysis libraries such as Pandas and Scikit-learn. |
-
-___
-
-Flowchart of the CAD System Architecture::
-```mermaid
-graph TD;
-    A[Data Collection]-->B[Pre-processing];
-    B[Pre-processing]-->C[Data Analysis];
-    C[Data Analysis]-->D[Feature Extraction using CNNs];
-    D[Feature Extraction using CNNs]-->E[Machine Learning using SVMs or Random Forests];
-    E[Machine Learning using SVMs or Random Forests]-->F[Model Evaluation and Optimization];
-    F[Model Evaluation and Optimization]-->G[Integration into a CAD System using Flask];
-    G[Integration into a CAD System using Flask]-->H[User Interface Development];
-    H[User Interface Development]-->I[Data Visualization using Plotly and Matplotlib];
-    I[Data Visualization using Plotly and Matplotlib]-->J[Deployment on a Dedicated Server];
-    J[Deployment on a Dedicated Server]-->K[Maintenance and Upgrades as necessary];
-```
 
 ## 🛑 Risks and Limitations:
 
-Even though analyzing medical images for disease diagnosis gives a lot of advantages both to doctors and patients, this process also poses several risks and limitations that should be considered. Below are points for technical, financial and legal risks:
+Even though analyzing rotten fruit images gives a lot of advantages, this process also poses several risks and limitations that should be considered. Below are points for technical, financial and legal risks:
 
 <ol>
 	<li> Technical Risks: </li>
 <ul>
-  <li> Accuracy of the analysis: Analyzing medical images needs for specialized equipment in terms of technology, specifically AI. Nevertheless, the accuracy of the analysis is based on the image quality, the radiologist or specialist's experience and expertise, and the technology's quality. Improper treatments or delayed diagnosis are the possible outcomes of wrong diagnosis.</li>
-  <li> Security and privacy: The most private aspects of a person are their health information. Medical images contain sensitive patient information, including personal health information. Unauthorized disclosure may result in several discrimination and a breach of basic rights. Certain kinds of data processing may result in the infringement of personal rights and interests. As the context of their processing may pose serious threats to basic rights and freedoms, personal data, which are by their very nature highly sensitive in connection to those rights and freedoms, warrant special protection.</li>
+  <li> Accuracy: Image analysis algorithms rely on accurate and reliable data to make accurate predictions. However, variations in lighting, colors, and textures can affect the accuracy of the predictions. In addition, different types of fruits may have different shapes and sizes, making it challenging to create a one-size-fits-all algorithm for fruit detection.</li>
+  <li> False positives and false negatives: Image analysis algorithms can produce false positives (detecting fruit as rotten when it is not) and false negatives (failing to detect rotten fruit). This can lead to unnecessary waste of good fruit or contamination of batches of fruit, resulting in significant costs.</li>
+  <li> Hardware limitations: Image analysis requires a high-resolution camera and a powerful computer with advanced image processing capabilities, which can be expensive and require specialized expertise to set up and maintain.</li>
 </ul>
 	<li> Financial Risks: </li>
 <ul>
-  <li> Cost: Medical image analysis may be costly, especially for cutting-edge technology like MRI or PET scans. The price of the software, maintenance, and hardware may be costly, which may have an impact on how much people must pay for healthcare.</li>
-  <li> Return on investment: For certain patients or medical professionals, the expense of medical image analysis could exceed the advantages. Alternative diagnostic techniques occasionally may be less expensive and yield comparable or superior outcomes.</li>
+  <li> Equipment and software costs: Implementing image analysis requires an initial investment in high-quality cameras, image processing software, and other hardware. The cost of these components can be significant, depending on the size and complexity of the fruit processing operation.</li>
+  <li> Labor costs: Even with image analysis, there may still be a need for human labor to sort and handle the fruit, which can add to the overall cost of the process.</li>
 </ul>
 	<li> Legal Risks: </li>
 <ul>
-  <li> Liability: Medical image analysis is a crucial procedure with important patient consequences. Healthcare professionals or radiologists who diagnose ailments incorrectly or fail to spot problems run the danger of being held accountable.</li>
-  <li> Regulatory compliance: Medical image analysis is subject to regulation by healthcare authorities, such as the Malaysian Medical Council. Providers must ensure that they are complying with regulations related to medical image analysis and patient privacy.</li>
+  <li> Liability: The use of image analysis for fruit detection does not eliminate the need to comply with food safety regulations and standards. If contaminated or rotten fruit is not detected and removed, it can lead to legal liabilities related to food safety and product liability.</li>
+  <li> Data privacy: Image analysis involves the collection and storage of data, which may include personal or sensitive information. The misuse or mishandling of this data can result in legal liabilities related to data privacy and security.</li>
 </ul>
 </ol>
 
@@ -215,27 +148,31 @@ Even though analyzing medical images for disease diagnosis gives a lot of advant
     <th>Timeframe</th>
   </tr>
   <tr>
-    <td>Data Gathering</td>
+    <td>Planning and Requirements Gathering</td>
     <td>Week 1-2</td>
   </tr>
   <tr>
-    <td>Data Cleaning and Preprocessing</td>
-    <td>Week 3-4</td>
+    <td>Data Exploration and Cleaning</td>
+    <td>Week 3-5</td>
   </tr>
   <tr>
-    <td>EDA</td>
-    <td>Week 5-7</td>
+    <td>Feature Engineering</td>
+    <td>Week 6</td>
   </tr>
   <tr>
-    <td>Build Model</td>
-    <td>Week 8-10</td>
+    <td>Model Selection and Training</td>
+    <td>Week 7-9</td>
   </tr>
   <tr>
-    <td>Evaluate Model</td>
+    <td>Model Evaluation and Refinement</td>
+    <td>Week 10</td>
+  </tr>
+  <tr>
+    <td>Dashboard Development</td>
     <td>Week 11-12</td>
   </tr>
   <tr>
-    <td>Deploy Model</td>
+    <td>Deployment and Documentation</td>
     <td>Week 13-14</td>
   </tr>
 </table>
@@ -245,125 +182,206 @@ Even though analyzing medical images for disease diagnosis gives a lot of advant
 ## 📚 Resources:
 
 <ol>
-  <li>
-    <p>Staff:</p>
-    <ul>
-      <li>Project Manager</li>
-      <li>Data Scientist</li>
-      <li>Machine Learning Engineer</li>
-      <li>Radiologist (to provide domain expertise)</li>
-      <li>Annotators for the medical images</li>
-    </ul>
-  </li>
-  <li>
-    <p>Equipment:</p>
-    <ul>
-      <li>High-performance computing equipment (e.g., GPU-enabled workstations or cloud computing resources) to train machine learning models on the medical image dataset</li>
-      <li>Computers for the staff to work on</li>
-    </ul>
-  </li>
-  <li>
-    <p>Software:</p>
-    <ul>
-      <li>3D Slicer, a medical imaging software for visualization and analysis of medical images</li>
-      <li>Machine learning algorithms, such as supervised learning (e.g., convolutional neural networks, decision trees) and unsupervised learning (e.g., clustering)</li>
-      <li>Deep learning frameworks, such as TensorFlow or PyTorch</li>
-      <li>Image processing libraries, such as OpenCV</li>
-      <li>Annotation software for labeling medical images</li>
-      <li>Collaboration and project management tools, such as Jira, Trello, and GitHub</li>
-    </ul>
-  </li>
-  <li>
-    <p>Other expenses:</p>
-    <ul>
-      <li>Data acquisition and storage</li>
-      <li>Annotation costs</li>
-      <li>Cloud computing costs (if using cloud-based resources)</li>
-      <li>Travel and accommodation costs for the project team to meet and work together, if necessary.</li>
-    </ul>
-  </li>
+		<li>Staff:</li>
+<ul>
+		<li>Project Manager: responsible for managing the project timeline, ensuring milestones are met, and overseeing the work of the team.</li>
+		<li>Data Scientist(s): responsible for data collection, preprocessing, modeling, and evaluation.</li>
+		<li>Data Engineer(s): responsible for setting up the data infrastructure, managing data pipelines, and ensuring data quality.</li>
+		<li>UI/UX Designer: responsible for designing the user interface and ensuring a seamless user experience.</li>
+		<li>Quality Assurance Engineer: responsible for testing the system, identifying bugs, and ensuring the system is working correctly.</li>
+		<li>Subject Matter Expert(s): responsible for providing domain expertise on fruit quality control and advising on dataset collection and annotation.</li>
+</ul>
+		<li>Equipment:</li>
+<ul>
+		<li>High-performance computing infrastructure: required for training and evaluating deep learning models.</li>
+		<li>High-quality cameras: required for capturing high-resolution fruit images.</li>
+		<li>Workstations/laptops: required for data preprocessing, modeling, and development.</li>
+	</ul>
+		<li>Software:</li>
+	<ul>
+		<li>Python: required for data processing, modeling, and evaluation.</li>
+		<li>MongoDB: require for storing the data collected</li>
+		<li>Deep learning frameworks such as TensorFlow, PyTorch, or Keras: required for developing deep learning models.</li>
+		<li>Image processing libraries such as OpenCV: required for preprocessing and analyzing images.</li>
+		<li>Version control systems such as Git: required for code management.</li>
+		<li>User interface development frameworks such as React or Angular: required for developing a user-friendly interface.</li>
+		<li>Cloud services such as Amazon Web Services or Google Cloud Platform: required for hosting the system and running computations.</li>
+	</ul>
+		<li>Other Expenses:</li>
+	<ul>
+		<li>Data collection and annotation: expenses related to collecting and annotating the fruit image dataset.</li>
+		<li>Licensing fees: expenses related to purchasing licenses for software or datasets.</li>
+		<li>Travel expenses: expenses related to attending conferences or meetings related to the project.</li>
+		<li>Miscellaneous expenses: expenses related to hardware maintenance, data storage, or other unforeseen costs.</li>
+	</ul>
 </ol>
-
 
 ## 🧰 Technical Specifications:
 
-<ol>
-<li>Data Schema:</li>
-<ul>
-	<li>The dataset consists of 5,863 X-Ray images (JPEG) of anterior-posterior view, with 2 categories - Pneumonia and Normal.</li>
-	<li>The dataset is organized into 3 folders (train, test, val) and contains subfolders for each image category (Pneumonia/Normal).</li>
-</ul>
-<li>Data Transformations:</li>
-<ul>
-	<li>Data pre-processing will be performed to normalize and standardize the image data.</li>
-	<li>Data augmentation techniques such as rotation, zooming, and flipping will be used to increase the diversity of the dataset and improve model performance.</li>
-</ul>
-<li>Machine Learning Algorithms:</li>
-<ul>
-	<li>Convolutional Neural Networks (CNN) will be used for image classification tasks.</li>
-	<li>Transfer learning techniques will be used to leverage pre-trained models and improve the efficiency of the model training process.</li>
-</ul>
-<li>Data Visualization Tools:</li>
-<ul>
-	<li>Matplotlib and Seaborn will be used for data visualization tasks.</li>
-	<li>Tableau.</li>
-</ul>
-<li>Programming Languages, Frameworks, and Libraries:</li>
-<ul>
-	<li>Python will be used as the primary programming language.</li>
-	<li>Tensorflow will be used as the deep learning frameworks.</li>
-	<li>Scikit-learn will be used for machine learning algorithms.</li>
-	<li>OpenCV will be used for image processing tasks.</li>
-	<li>Numpy and Pandas will be used for data manipulation and analysis.</li>
-</ul>
-<li>Hardware and Software Requirements:</li>
-<ul>
-	<li>A machine with a minimum of 8GB RAM and a dedicated GPU (e.g. Nvidia GTX 1080) is recommended for training the deep learning models.</li>
-	<li>The software requirements include Python 3.6+, Tensorflow, Scikit-learn, OpenCV, Numpy, and Pandas.</li>
-</ul>
-<li>Data Security Measures:</li>
-<ul>
-	<li>The dataset will be stored securely on a password-protected machine.</li>
-	<li>Access to the dataset will be restricted to authorized personnel only.</li>
-	<li>Any data backups will also be stored securely with proper encryption.</li>
-</ul>
-</ol>
+<table>
+  <tr>
+    <th align= "left">Data sources</th>
+    <td>The data source for the proposed data science project will be fruit images. These images will be acquired using web scrapping method from Google API. </td>
+  </tr>
+  <tr>
+    <th align= "left">Data schema</th>
+    <td>The data schema will include the following fields:
+	    <li>Image: The original fruit image</li><li>Pre-processed Image: The image after pre-processing</li><li>Result: The analysis result (rotten or not rotten)</li></td>
+  </tr>
+  <tr>
+    <th align= "left">Data transformations</th>
+    <td>The following data transformations will be applied:
+	  <li>Pre-processing: Image resizing, cropping, and normalization</li><li>Image Analysis: Image segmentation, feature extraction, and classification</li></td>
+  </tr>
+  <tr>
+    <th align= "left">Machine learning algorithms</th>
+    <td>The following machine learning algorithms will be used for image analysis:
+	<li>Convolutional Neural Network (CNN) for feature extraction</li>
+	<li>K-Nearest Neighbors (KNN) for classification</li>
+</td>
+  </tr>
+  <tr>
+    <th align= "left">Data visualization tools</th>
+    <td>MongoDB charts, Python's Matplotlib and Seaborn libraries</td>
+  </tr>
+  <tr>
+    <th align= "left">Programming language</th>
+    <td>Python, MongoDB Query Language (MQL), OpenCV, Keras, and TensorFlow frameworks for image processing and machine learning</td>
+  </tr>
+  <tr>
+    <th align= "left">Frameworks</th>
+    <td>TensorFlow, Keras</td>
+  </tr>
+  <tr>
+    <th align= "left">Libraries</th>
+    <td>Matplotlib, Seaborn, Scikit learn, Numpy</td>
+  </tr>
+  <tr>
+    <th align= "left">Hardware & software requirements</th>
+    <td>
+      <ul>
+        <li>RAM: 8GB or higher</li>
+        <li>Storage: At least 500GB of storage</li>
+        <li> Windows operating system (recomended) installed with all softwares mentioned such as MongoDB and Django</li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <th align= "left">Data security measures</th>
+    <td>
+	  <ul>
+	    <li>Password protection and encryption for the MongoDB database</li>
+	    <li>Use of secure data transmission protocols such as SSL/TLS for data transfer</li>
+	    <li>Regular backups and disaster recovery planning</li>
+	  </ul>
+	</td>
+  </tr>
+</table>
 
 ## 🏁 Timeline and Deliverables: 
+
+<div class="gantt">
+
+  ```mermaid
+gantt
+    title Image Analysis for Rotten Fruit Detection Gantt Chart
+    dateFormat  YYYY-MM-DD
+    section Planning and Requirements Gatherings
+    Requirements Gatherings  :2023-03-19 , 14d
+  
+    section Data Exploration and Cleaning
+    Data Collection            :2023-04-02  , 10d
+    Data Cleaning              :2023-04-12 , 6d
+    Data Analysis              :2023-04-18 , 5d
+  
+    section Feature Engineering
+    Features identification        :2023-04-23 , 7d
+ 
+    section Model Selection and Training
+    Model Selection        :2023-04-30 , 7d
+    Model Training     :2023-05-07 , 7d
+	
+    section Model Evaluation and Refinement
+    Model Evaluation        :2023-05-08 , 2d
+    Model Refinement        :2023-05-10 , 3d
+   
+    section Dashboard development
+    Dashboard development              :2023-05-14 , 14d
+    Testing     :2023-05-28 , 2d
+  
+    section Deployment and documentation
+    Deployment     :2023-05-29  , 15d
+    Documentation     :2023-06-13 , 7d
+  
+  ```
+  </div>
+
+
+
+<p>Deliverables and Milestones:</p>
 <ol>
-	<li>Detailed Timeline:</li>
+	<li>Planning and Requirements Gathering (Week 1-2):</li>
+	<ul>
+		<li>Define project objectives and goals</li>
+		<li>Identify data sources and collection methods</li>
+		<li>Determine hardware and software requirements</li>
+		<li>Finalize project plan and timeline</li>
+		<li>Deliverable: Project plan and timeline</li>
+	</ul><br>
+		<li>Data Exploration and Cleaning (Week 3-5):</li>
+	<ul>
+		<li>Gather and preprocess a diverse dataset of fruit images, including both healthy and rotten fruits, with a range of lighting conditions and camera angles</li>
+		<li>Analyze and visualize the dataset to identify data quality issues and outliers</li>
+		<li>Clean and normalize the dataset to prepare it for feature engineering</li>
+		<li>Deliverable: Cleaned dataset</li>
+	</ul><br>
+		<li>Feature Engineering (Week 6):</li>
+	<ul>
+		<li>Extract relevant features from the image dataset, such as color and texture</li>
+		<li>Preprocess the features to reduce dimensionality and optimize performance</li>
+		<li>Deliverable: Feature set</li>
+	</ul><br>
+		<li>Model Selection and Training (Week 7-9):</li>
+	<ul>
+		<li>Research and evaluate different deep learning models, such as convolutional neural networks, for fruit quality classification</li>
+		<li>Train the selected model on the feature set using appropriate hyperparameters and optimization techniques</li>
+		<li>Monitor and tune model performance as needed</li>
+		<li>Deliverable: Trained deep learning model</li>
+	</ul><br>
+		<li>Model Evaluation and Refinement (Week 10):</li>
+	<ul>
+		<li>Evaluate the performance of the trained model using a separate test dataset</li>
+		<li>Refine the model as needed to improve accuracy and reduce false positives/negatives</li>
+		<li>Deliverable: Optimized deep learning model</li>
+	</ul><br>
+		<li>Dashboard Development (Week 11-12):</li>
+	<ul>
+		<li>Develop a user-friendly interface for the system to allow for easy input of fruit images and displaying the results of the analysis</li>
+		<li>Incorporate visualization tools to help users interpret results</li>
+		<li>Deliverable: Fruit quality control dashboard</li>
+	</ul><br>
+		<li>Deployment and Documentation (Week 13-14):</li>
+	<ul>
+		<li>Integrate the fruit quality control dashboard into the fruit production chain</li>
+		<li>Develop documentation for the system, including user guides and technical manuals</li>
+		<li>Conduct final testing and quality assurance checks to ensure the system is scalable, user-friendly, and cost-effective</li>
+		<li>Deliverable: Deployed fruit quality control system with documentation</li>
+	</ul><br>
+	<p>Quality Assurance and Testing Procedures:
+		To ensure the quality and accuracy of the system, the following procedures will be followed:
+	</p>
+	<ul>
+		<li>Regular testing and evaluation of the deep learning model using a separate test dataset</li>
+		<li>Continuous monitoring and tuning of model performance to minimize false positives/negatives</li>
+		<li>Integration of visualization tools to help users interpret results</li>
+		<li>User acceptance testing and feedback to ensure the dashboard is user-friendly and meets industry standards</li>
+		<li>Final testing and quality assurance checks before deployment to ensure the system is scalable, reliable, and cost-effective.</li>
+	</ul>
 </ol>
-<ul>
-	<li>Week 1-2: Data Collection</li>
-	<li>Week 3-5: Data Cleaning and Preprocessing</li>
-	<li>Week 6-8: Feature Extraction</li>
-	<li>Week 9-10: Machine Learning Algorithms</li>
-	<li>Week 11-12: Data Visualizations</li>
-	<li>Week 13-14: Report</li>
-</ul>
-<ol start="2">
-	<li>Deliverables and Resources:</li>
-</ol>
-<ul>
-	<li>Data Collection: Deliverable: Complete dataset; Resources: Data acquisition and storage</li>
-	<li>Data Cleaning and Preprocessing: Deliverable: Cleaned and standardized dataset; Resources: Computers for staff, image processing libraries</li>
-	<li>Feature Extraction: Deliverable: Extracted features from dataset; Resources: High-performance computing equipment, deep learning frameworks</li>
-	<li>Machine Learning Algorithms: Deliverable: Trained machine learning models; Resources: High-performance computing equipment, supervised and unsupervised learning algorithms</li>
-	<li>Data Visualizations: Deliverable: Visualizations of dataset and model performance; Resources: Matplotlib, Seaborn, Tableau</li>
-	<li>Report: Deliverable: Final report on the project; Resources: Collaboration and project management tools</li>
-</ul>
-<ol start="3">
-	<li>Quality Assurance and Testing Procedures:</li>
-</ol>
-<ul>
-	<li>Cross-validation will be used to assess model performance and prevent overfitting.</li>
-	<li>The dataset will be split into training, validation, and test sets.</li>
-	<li>Hyperparameter tuning will be performed to optimize model performance.</li>
-	<li>A radiologist will provide domain expertise to ensure the accuracy of the image annotations.</li>
-	<li>The final report will include a discussion of limitations and potential areas for improvement.</li>
-</ul>
 
 
 ## 📄 Conclusion:
 
-In conclusion, our proposed solution for automating the diagnosis of pneumonia through machine learning algorithms has the potential to revolutionize the medical field. By leveraging state-of-the-art technology and techniques, we aim to provide a robust and accurate diagnostic tool for medical professionals to assist in making informed decisions about patient care. Our project timeline, deliverables, and technical specifications have been carefully planned to make sure the project is executed efficiently and effectively. We are confident in our ability to deliver high-quality results within the proposed timeframe and budget. However, we recognize that challenges and limitations may arise during the project, such as data quality issues or hardware constraints. We believe that our proposed solution has the potential to make a significant impact in the medical field, and we are excited about the prospect of working on this project.
+In conclusion, the proposed solution of developing an image analysis system for detecting rotten fruits, utilizing state-of-the-art machine learning techniques, can significantly benefit the fruit industry by improving fruit quality control and reducing waste. The project aims to collect a diverse dataset of fruit images, preprocess them to enhance image quality and extract features relevant to fruit quality, train and evaluate a deep learning model to classify fruits as healthy or rotten, and develop a user-friendly interface for the system. The project has several potential limitations and challenges, such as the integration of the system into the fruit production chain. However, recent advancements in machine learning algorithms and computer vision have enabled more sophisticated approaches for fruit quality inspection, making this project highly promising.
+
+Therefore, we urge decision-makers in the fruit industry to approve this proposal and proceed with the project. By achieving the proposed objectives, this project will provide a valuable tool for the fruit industry, allowing for improved quality control and reduced waste, which will have a significant impact on the economic, environmental, and social sustainability of the industry.
