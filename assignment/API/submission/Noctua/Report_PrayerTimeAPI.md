@@ -1,5 +1,7 @@
-<div align='center'><h1>Report Prayer Time API</h1></div>
 
+<a href="https://github.com/drshahizan/special-topic-data-engineering/assignment/API/submission/Noctua/Report_PrayerTimeAPI.md/graphs/contributors" src="https://img.shields.io/github/contributors/drshahizan/special-topic-data-engineering?color=2b9348"></a>
+
+<div align='center'><h1>Report Prayer Time API</h1></div>
 
 ## 📖Introduction
 
@@ -122,25 +124,71 @@ PyMongo is a Python library that provides tools for working with MongoDB databas
 ! pip install pymongo
 from pymongo import MongoClient
   ```
-  
-2) Set collection & database name according to MongoDB
+ 
+2) Connect MongoDB Atlass with MongoDB Compass
+
+- 1. Create a new cluster by navigating from MongoDB Atlass by selecting these path
+
+`Deployment` > `Database` > `Create`
+
+<img height='300px' src='Figures/CreateCluster.png'/>
+ 
+- 2. Select these options to start building a generating a new cluster
+
+`Shared` > `AWS` > `Asia` > Singapore (ap-southeast-1)
+
+<img height='300px' src='Figures/ServerAndCloud.png'/>
+
+<img height='300px' src='Figures/Region.png'/>
+
+- 3. Rename the new cluster appropriate for the dataset.
+
+- 4. Edit network access by adding IP address of our machines (laptop) so that we can connect to our cluster using the stated IP address.
+
+`Security` > `Network Access` > `IP Access List` > `Add IP Address`
+
+<img height='300px' src='Figures/NetworkAccess.png'/>
+
+- 5. Edit Database Access to control who has the priviledge to access the current database
+
+`Security` > `Database Access` > `Database Users` > `Add New Database User`
+
+<img height='300px' src='Figures/DBAccess.png'/>
+
+- 6. Get coonection string from the created cluster
+
+`Deployment` > `Database` > `"Your Cluster Name"` > `Connect` > `Compass` > `I have MongoBD Compass` > `1.12 or later` > `copy`
+
+<img height='300px' src='Figures/String.png'/>
+
+- 7. Open MongoDB Compass and paste the string copied from MongoDB Atlass to the URI in the `New Connection` section.
+
+<img height='300px' src='Figures/ConnectDBCompass.png'/>
+
+- 8. Edit the string pasted in the URI. Replace the password statement with the our user password created from the `Database Access`
+
+```python
+mongodb+srv://admin:<password>@<cluster_name>.<cluster.id>.mongodb.net/test
+```
+ 
+3) Set collection & database name according to MongoDB
 
 The `MongoClient` class in PyMongo is used to establish a connection to a MongoDB instance or cluster. Once a connection is established, we can use the client object to perform operations on the MongoDB database. In the context of Google Colab, we can use the MongoClient class to connect to a MongoDB instance hosted on a remote server.
 
 ```python 
-# Create a Mongo DB client
+# Connect MongoDBClient by pasting the connection string from MongoDB Compass
 client = MongoClient('mongodb+srv://user1:60XRzCr4mubxCPC5@cluster0.evngzba.mongodb.net/test')
 
-# Select the existing database to store the csv files
+# A new database will be created
 db = client["prayer_times_data"]
 
-# Select the existing database collection to group the csv files
+# A new collection under the database created above will be generated
 collection = db["Penang"]
 ```
 
 > Collection should be change based on city prayer time.
 
-3) Change data to dictionary
+4) Change data to dictionary
 
 ```python 
 
@@ -150,13 +198,13 @@ Data_dictionary=df.to_dict('records')
 print(Data_dictionary)
 
    ```
-4) Insert data into collection made in MongoDB.
+5) Insert data into collection made in MongoDB.
 
 ``` python
-collection.insert_many(data)
+collection.insert_many(Data_dictionary)
 ```
    
-5) Final product in MongoDB Compass and Atlas.
+6) Final product in MongoDB Compass and Atlas.
 
 
    <img height='300px' src='Figures/MongoDBCompass.png'/>
