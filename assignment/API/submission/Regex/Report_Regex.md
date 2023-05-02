@@ -102,4 +102,3 @@ print('CSV data uploaded to MongoDB successfully.')
 Open MongoDB to check whether the data is inserted or not. The image below shows the MongoDB Compass screenshot of documents successfully inserted into the collection of database.
 
 <img width="754" alt="image" src="https://user-images.githubusercontent.com/120556342/230760001-3a5d9784-8921-444f-8360-2b50d6d84b08.png">
-
