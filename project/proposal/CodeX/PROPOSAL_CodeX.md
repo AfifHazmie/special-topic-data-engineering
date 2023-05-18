@@ -65,6 +65,18 @@ Below is an overview example of how the system will be programmed:
 </p> 
 
 ## 6. System Architecture
+
+The system will consist of the following components:
+
+| No. | Components | Description |
+| ------------- | ------------- | ------------- |
+| 1. | Data Collection| We will collect the Netflix data from Rapid API, the data contains about the search titles for the series, the actors for the series and also the deleted titles by country. The data will collected in JSON format.|
+| 2. | Data Storage | The data collected will be stored in MongoDB. |
+| 3. | Data preprocessing | We will clean and preprocess the data before evaluating it. To normalize the text data, we will remove stop words, punctuation, and URLs, as well as perform stemming and lemmatization. Not only that, we also planed to change the data format from JSON to CSV, so the data is easier to execute.|
+| 4. | Data analysis and modeling | The preprocessed data will be analysis using **k-nearest neighbors algorithm (KNN)** |
+| 5. | Model deployment |**Django**, a Python-based web framework, will be used by the model deployment component to deploy machine learning models to a web server. The algorithm will deploy the trained data after machine learning. This will help a lot to see the end result and also for data visulization |
+| 6. | Visualization and reporting | We will use **Matplotlib**, a Python visulization library to visualize the data. We will also use **Power BI** to create reports and dashboards that can be shared with stakeholders. |
+
 <p align="center">
 <img height='500px' src='Recommendation architecture.png'/>
 </p> 

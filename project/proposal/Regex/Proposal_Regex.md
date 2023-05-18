@@ -2,7 +2,7 @@
   Shopee Supermarket Sales Performance Dashboard <img height='50px' width='50px' src='https://user-images.githubusercontent.com/120556342/228145762-83c369fc-a6b8-49da-a2be-fd31b7f280c3.png'>
  </h1>
  <h3 align='center'> 
- Analyze Shopee Supermarket sales to gain insights into market trend and optimize sales strategy
+ Analyze Shopee Supermarket sales by Household Supplies Category to gain insights into market trend and optimize sales strategy
   </h3>
   <br>
 <p align='center'>
@@ -60,7 +60,7 @@ This will be significant for online sellers to track their progress and quickly 
 
 ## 🔭Scope
 
-This project will develop an e-commerce analytics dashboard to analyze the sales performance of Shopee Supermarket in order for businesses to obtain valuable insights and look to optimize their online sales and marketing efforts.
+This project will develop an e-commerce analytics dashboard to analyze the sales performance of household supplies at Shopee Supermarket in order for businesses to obtain valuable insights and look to optimize their online sales and marketing efforts.
 
 - The data that will be used in this project is collected from <a href="https://shopee.com.my/">Shopee</a> Malaysia. It is an e-commerce platform that sells a variety of categories of products like Home & Living, Health & Beauty and Electronics.
  
@@ -75,7 +75,7 @@ This project will develop an e-commerce analytics dashboard to analyze the sales
 
 ## 🔍Methodology
 
-1. `Data Collection:` First and foremost is data collection. We will collect data such as price, item sold and profit about products from Shopee Supermarket. All of the data sales can be retrieved by using web scraping method.
+1. `Data Collection:` First and foremost is data collection. We will collect data such as price, item sold and profit about products from Shopee Supermarket by household supplies category. All of the data sales can be retrieved by using web scraping method.
 
 2. `Data Preparation:` This step includes **data cleaning** and **data transforming** process where all retrieved data will be cleaned in order to make sure there are no noisy and dirty data. Hence, the quality of the data increases which later will produce more complete, accurate and consistent result. Then, transform the format of the data if needed.
 
@@ -90,30 +90,7 @@ This project will develop an e-commerce analytics dashboard to analyze the sales
 
 **Proposed system architecture for the Shopee Supermarket Sales Performance Dashboard:**
 
-```mermaid
-%%{
-  init: {
-    'theme': 'base',
-    'themeVariables': {
-      'primaryColor': '#e76f51',
-      'primaryTextColor': '#d9d9d9',
-      'primaryBorderColor': '#e76f51',
-      'lineColor': '#d9d9d9',
-      'secondaryColor': '#284b63',
-      'tertiaryColor': '#d9d9d9'
-    }
-  }
-}%%
-
-flowchart TD;
-    id1[Beautiful Soup Web Scraper]<--Get transactional and inventory data-->id2[Shopee Malaysia]
-    id1[Beautiful Soup Web Scraper] --Store Data--> id3[(MongoDB)]
-    id3[(MongoDB)] --Process and analyse data using Python--> id7[Visual Studio Code]
-    id7[Visual Studio Code] --Store processed data--> id3[(MongoDB)]
-    id3[(MongoDB)] --Visualise data into dashboard, reports and charts--> id4[Power BI]
-    id4[Power BI] --Deploy a platform and user interface to access dashboard--> id5[Django]
-    id5[Django] --> id6[Public Interest]
-```
+<p align=center><img src=https://github.com/drshahizan/special-topic-data-engineering/blob/370574982f89f418c400339172e14cf9fc79fc12/project/proposal/Regex/system%20architecture.drawio.png></p>
 
 <table align=center>
   <tr>
@@ -129,8 +106,15 @@ flowchart TD;
     <li>Shopee Supermarket inventory data: product availability, pricing, and promotions.</li></ol>
     </td>
     <td>
-      <li>Beautiful Soup</li>
-      <li>Python</li>  
+      <li>Web Scraper</li>  
+    </td>
+  </tr>
+  <tr>
+  <tr>
+    <td>Data Processing</td>
+    <td>Once the data is collected and stored, it needs to be preprocessed and transformed into a format that can be analyzed. This involves data cleaning, normalization, transformation, etc.</td>
+    <td>
+      <li>Python</li> 
     </td>
   </tr>
   <tr>
@@ -139,8 +123,8 @@ flowchart TD;
     <td><li>MongoDB</li></td>
   </tr>
   <tr>
-    <td>Data Processing and Analysis</td> 
-    <td>Once the data is collected and stored, it needs to be preprocessed and transformed into a format that can be analyzed. This involves data cleaning, normalization, transformation, etc. The data analysis will include the following:
+    <td>Data Analysis</td> 
+    <td>The data analysis will include the following:
       <ol>
       <li>Descriptive analytics: Analyzing historical data to identify trends, patterns, and anomalies in sales performance.</li>     
       <li>Diagnostic analytics: Identifying the factors contributing to sales performance, such as product availability, pricing, and promotions.</li>
@@ -148,12 +132,10 @@ flowchart TD;
       <li>Prescriptive analytics: Recommending actions to optimize sales performance, such as adjusting pricing, promotions, and product availability.</li>
       </ol></td>
     <td>
-          <li>Visual Studio Code</li>    
-          <li>Python</li>
-          <li>Pandas library for data manipulation and cleaning</li>
-          <li>NumPy library for mathematical operations on arrays</li>
-          <li>Matplotlib, Seaborn, or Plotly for data visualization</li>
-          <li>Scikit-learn for machine learning algorithms</li>
+          <li>Python Pandas</li>
+          <li>Python NumPy</li>
+          <li>Matplotlib, Seaborn, or Plotly</li>
+          <li>Scikit-learn</li>
      </td>
   </tr>
   <tr>
